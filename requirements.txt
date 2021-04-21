@@ -1,5 +1,6 @@
 telethon>=1.18.1
 telethon-session-sqlalchemy>=0.2.6
+wheel
 aiohttp
 aria2p
 async_generator
