@@ -1,28 +1,30 @@
 <p align="center"><a href="https://t.me/DogeUserBot"><img src="https://raw.githubusercontent.com/DogeUserBot/DogeInstaller/main/DogeUserBot.jpg" width="400"></a></p>
-  <h1 align="center">🐶 Doge UserBot</h1>
+  <h1 align="center">🐶 DOGE USERBOT 🐾</h1>
 </p>
 <p align="center">
     ❤️ Telegram'da bir köpeğiniz olsun!
     <br>
-    <br>
-        <a href="https://t.me/DogeUserBot">📣 Telegram Kanalı</a>
-    <br>
-    <br>
-        <a href="https://t.me/DogeDestek">💬 Telegram Destek Grubu</a>
+    ❤️ Have a dog in Telegram!
     <br>
     <br>
-        <a href="https://t.me/DogePlugin">📥 Plugin Kanalı</a>
+        <a href="https://bit.ly/DogeUserBot">📣 Güncelleme Duyuruları | Update News</a>
     <br>
     <br>
-        <a href="https://github.com/DogeUserBot/DogeUserBot#-kolay-kurulumlar">⚡ Kurulumlar</a>
+        <a href="https://t.me/DogeSup">💬 Destek Grubu | Support Group</a>
+    <br>
+    <br>
+        <a href="https://t.me/DogePlugin">📥 Pluginler | Plugins</a>
+    <br>
+    <br>
+        <a href="https://github.com/DogeUserBot/DogeUserBot#-kolay-kurulumlar">⚡ Kurulumlar | Installations </a>
 </p>
 
 ----
 
-## 🔗 Kolay Kurulumlar
+## 🔗 Kolay Kurulumlar | Easy Installations
 
-### 🌐 Repl.it Online Kurucu
-⬇️ Aşağıdaki butona/linke tıklayın/dokunun:
+### 🌐 Online Kurucu | Online Installer
+⬇️ Aşağıdaki butona tıklayın/dokunun:
 
 [![Run on Repl.it](https://repl.it/badge/github/@DogeUserBot/DogeOnline)](https://bit.ly/DogeO)
 
@@ -33,7 +35,7 @@
 
 📋 Aşağıdaki kodu Termux'a yapıştırın:
 
-```bash <(curl -L https://bit.ly/DogeAndroid)```
+```bash <(curl -L https://bit.ly/Dogeai)```
 
 ----
 
@@ -57,8 +59,8 @@
 
 ----
 
-## 🔗 Zor Kurulumlar
-### 🌐 Manuel Kurucu
+## 🔗 Zor Kurulumlar | Diffucult Installations
+### 🌐 Elle Kurulum | Manuel Installation
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://bit.ly/DogeHeroku)
 
 ----
@@ -73,13 +75,13 @@ python3 -m doge_installer
 
 ----
 
-## 🪧 Örnek Plugin Gösterimi
+## 🪧 Örnek Plugin Gösterimi | Example Plugin
 ```python
 from userbot.events import register
 from userbot.cmdhelp import CmdHelp 
 # <-- Bunu ekleyin ve daha sonra herhangi bir metin yazabilirsiniz.
 
-@doge(outgoing=True, pattern="^.ornekdeneme")
+@register(outgoing=True, pattern="^.ornekdeneme")
 async def ornekdeneme(event):
     await event.edit('Bu bir örnek deneme pluginidir!')
 
@@ -89,46 +91,46 @@ Help.add_command('ornekdeneme', # Komutu bu şekilde yazıyoruz.
     'Deneme yapıyor.', # Komut açıklamasını bu şekilde belirtiyoruz.
     'ornekdeneme' # Örnek komut kullanımını burada belirtiyoruz.
     )
-Help.add_info('@MUTLCC ve @Yigix tarafından yapılmıştır.') # Buna benzer bilgi ekleyebilirsiniz.
-Help.add_warning('UYARI BURAYA!') # Buraya uyarı ekleyebilirsiniz.
+Help.add_info('@MUTLCC ve @Yigix tarafından @DogeUserBot için yapıldı.') # Buna benzer bilgi ekleyebilirsiniz.
+Help.add_warning('BUNU YAPMA!') # Buraya uyarı ekleyebilirsiniz.
 Help.add() # Plugini bu şekilde bitiriyoruz.
 ```
 
 ----
 
-## 👤 Creators
-💚 [Mutlu](https://t.me/MUTLCC)
+## 👤 Oluşturucular | Creators
+💚 [Mutlu](https://t.me/MutluTelegram)
 
 💜 [Yiğit](https://t.me/SanalMafya)
 
 ----
 
-## 💬 Bilgilendirme
-📍 Herhangi bir soru veya geribildirim için bize [🐶 Doge Destek grubumuzdan](https://t.me/DogeDestek) ulaşabilirsiniz.
+## 💬 Bilgilendirme | Information
+📍 Herhangi bir soru veya geribildirim için bize [🐶 Doge Destek grubumuzdan](https://t.me/DogeSup) ulaşabilirsiniz.
 
 ```
-🟩 Doge UserBot, açık kaynaklı bir projedir.
+ℹ️ Doge UserBot, açık kaynaklı bir projedir.
 
-ℹ️ UserBot kötüye kullanım sebebiyle;
+💡 UserBot kötüye kullanım sebebiyle;
     
-   🟥 Telegram hesabınız kısıtlanabilir/yasaklanabilir.
+   🚫 Telegram hesabınız kısıtlanabilir/yasaklanabilir.
     
-   🟦 Her yaptığınız işlemden sorumlu tutulursunuz.
+   💣 Her yaptığınız işlemden sorumlu tutulursunuz.
     
-   🟨 Doge UserBot yöneticileri hiçbir sorumluluk kabul etmemektedir.
+   ⛔️ Doge UserBot yöneticileri hiçbir sorumluluk kabul etmemektedir.
     
-   🟧 Doge UserBot kurarak tüm bu sorumlulukları kabul etmiş olursunuz.
+   📍 Doge UserBot kurarak tüm bu sorumlulukları kabul etmiş olursunuz.
 ```
 
-### 📝 Lisans
-<a href="https://tr.m.wikipedia.org/wiki/GNU_Genel_Kamu_Lisans%C4%B1#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/GPLv3_Logo.svg/1280px-GPLv3_Logo.svg.png" width="200"></a>
+### 📝 Lisans | License
+<a href="https://tr.m.wikipedia.org/wiki/GNU_Genel_Kamu_Lisans%C4%B1#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/93/GPLv3_Logo.svg/1280px-GPLv3_Logo.svg.png" width="150"></a>
 
 🔐 Bu proje GPL-3.0 lisansı ile korunmaktadır.
 
 ✅ Tüm hakları saklıdır.
 
 
-### 🤍 Teşekkürler
+### 🤍 Teşekkürler! | Thanks!
 🧑‍💻 [Yusuf Usta](https://github.com/yusufusta)
 
 ----
