@@ -957,9 +957,10 @@ async def gspider(gspdr):
         if reason:
             await gspdr.edit(f"{LANG['GMUTED']} {LANG['REASON']}: {reason}")
         else:
-            await gspdr.edit({mention} LANG['GMUTED'].format(
+            await gspdr.edit(f"{mention} {LANG['GMUTED'].format(
                 mention = f"[{user.first_name}](tg://user?id={user.id})",
-            ))
+            )}
+            )
 
         if BOTLOG:
             await gspdr.client.send_message(
