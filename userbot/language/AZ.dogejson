@@ -83,6 +83,7 @@
             "GMUTING": "`Dünya miqyasında susdurulur...`",
             "ALREADY_GMUTED": "`Xəta! İstifadəçi onsuzda dünya miqyasında susduruldu.`",
             "GMUTED": "`İstifadəçi dünya miqyasında susduruldu!`",
+            "GLOMUTED": "{mention}`, səni dünya miqyasında susdurdum!`",
             "NO_ZOMBIE": "`Silinmiş hesab tapılmadı, qrup təmizdir!`",
             "ZOMBIE": "`Var olmayan/silinmiş/zombi hesaplar  axtarılır...`",
             "ZOMBIES": "**`Bu qrupda` **{}** `ədəd Var olmayan/ silinmiş / zombi hesab tapıldı,\ntəmizləmək üçün` **.zombies clean** `komandasını icra edin`",
@@ -665,12 +666,12 @@
             "LINK": "Profil üçün daimi əlaqə"
         },
         
-	"www": {
+	    "www": {
             "SPEED": "`Sürət testi hesablanır...`",
             "STARTED_TIME": "Başlama Tarixi: ",
             "DOWNLOAD_SPEED": "Yükləmə Sürrəti: ",
             "UPLOAD_SPEED": "Upload Sürrəti: ",
             "ISP": "İnternet xidməti təminatçısı: "
-	},
+	    }
     }
 }

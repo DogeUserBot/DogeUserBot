@@ -84,6 +84,7 @@
             "GMUTING": "`Küresel olarak susturuyorum...`",
             "ALREADY_GMUTED": "`Kullanıcıyı daha önce küresel olarak susturmuştum.`",
             "GMUTED": "`Kullanıcıyı küresel olarak susturdum!`",
+            "GLOMUTED": "{mention}`, seni küresel olarak susturdum!`",
             "NO_ZOMBIE": "`Silinmiş hesap bulamadım, burda sinir bozucu kediler yok!`",
             "ZOMBIE": "`Bir saniye burda sinir bozucu kediler mi var, hemen bakıyorum ...`",
             "ZOMBIES": "**`Bu grupta` **{}** `tane silinmiş hesap buldum,\nkedileri kovalamamı istiyorsanız` **.zombies clean** `komutunu kullanın`",
@@ -665,6 +666,7 @@
             "COMMON_CHAT": "Bu kullanıcı ile ortak sohbetler",
             "LINK": "Profil için kalıcı bağlantı"
         },
+
         "www": {
             "SPEED": "`Hız testi yapılıyor...`",
             "STARTED_TIME": "Başlama Tarihi: ",
