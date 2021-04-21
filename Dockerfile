@@ -7,7 +7,7 @@
 # @MUTLCC | @SanalMafya
 #
 FROM dogeuserbot/dogeuserbot:latest
-WORKDIR /root/DOGE/
-RUN git clone https://github.com/DogeUserBot/DogeUserBot.git /root/DOGE
+RUN git clone https://github.com/DogeUserBot/DogeUserBot /root/DOGEUSERBOT
+WORKDIR /root/DOGEUSERBOT/
 RUN pip3 install -r requirements.txt
 CMD ["python3", "doge.py"]
