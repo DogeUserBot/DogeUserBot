@@ -1,0 +1,14 @@
+[tool]
+[tool.poetry]
+authors = ["Mutlu <Mutluis@outlook.com>"]
+description = "Automatic Deploy Doge UserBot to Heroku"
+name = "DogeUserBot_Installer"
+version = "1.0"
+[tool.poetry.dependencies]
+bs4 = "*"
+gitpython = "*"
+heroku3 = "*"
+python = "^3.8"
+requests = "*"
+rich = "*"
+telethon = "*"
