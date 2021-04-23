@@ -1,4 +1,4 @@
-<p align="center"><a href="https://t.me/DogeSup"><img src="https://raw.githubusercontent.com/DOGEUSERBOT/DogeUserBot/DogeInstall/DogeUserBot.jpg" width="200"></a></p>
+<p align="center"><a href="https://t.me/DogeSup"><img src="https://raw.githubusercontent.com/DOGEUSERBOT/DogeUserBot/installer/DogeUserBot.jpg" width="200"></a></p>
   <h1 align="center">🐶 DOGE USERBOT INSTALLER 🐾</h1>
 </p>
 <p align="center">
@@ -59,7 +59,7 @@
 
 ### ℹ️ Terminal, Termux, vb.
 ```sh
-git clone -b DogeInstall https://github.com/DogeUserBot/DogeUserBot
+git clone -b installer https://github.com/DogeUserBot/DogeUserBot
 cd installer
 pip install -r requirements.txt
 python3 -m installer
