@@ -30,7 +30,6 @@
             "SUCCESS_POSTGRE": "(✓) PostgreSql Installed!",
             "AUTO_BOTLOG": "This group was automatically created with @DogeUserBot in the post-installation phase.",
             "DONT_LEAVE": "** PLEASE DON'T LEAVE THIS GROUP! **",
-            "AFTER_INSTALL": "Do you want to start after installation?",
             "BOTLOG": "Create a BotLog Group",
             "OPENING_BOTLOG": "(i) Creating the group...",
             "OPENED_BOTLOG": "(✓) Botlog has been set up successfully!",

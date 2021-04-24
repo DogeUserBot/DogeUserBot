@@ -30,7 +30,6 @@
             "SUCCESS_POSTGRE": "✅ PostgreSQL-i tənzimləmiş!\n",
             "AUTO_BOTLOG": "🐶 @DogeUserBot ilə bu qrup avtomatik olaraq quraşdırma sonrası konfiqurasiyada yaradılır və 🐾 Doge-nin gündəlik qeydlerini yazar.",
             "DONT_LEAVE": "**⚠️ 𝘽𝙐 𝙌𝙍𝙐𝙋𝘿𝘼𝙉 𝘾𝙄𝙓𝙈𝘼𝙔𝙄𝙉 ⚠️\n\n🐶 @DogeUserBot ilə bu qrup quraşdırma sonrası konfiqurasiyada avtomatik olaraq yaradıldı.\n\n🐾 Doge-nin gündəlik qeydlərini yazar.**",
-            "AFTER_INSTALL": "\n⚡ Quraşdırma parametrlrinə başlayın! \n🔹 (TƏKLİF EDİRƏM!) \n🧡 'y' yazın, beləliklə sizin üçün uyğunlaşıram! ",
             "BOTLOG": "Bir BOTLOG (gündəlik qeyd) qrupu yaradın (TƏSVİR EDİLİR!) ",
             "OPENING_BOTLOG": "⏳ BOTLOG qrupu yaradıram...",
             "OPENED_BOTLOG": "✅ BOTLOG qrupu yaratdım!  \n",

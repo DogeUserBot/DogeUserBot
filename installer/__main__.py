@@ -169,9 +169,10 @@ if __name__ == "__main__":
 
     basarili(LANG['OPENED_DYNO'])
     basarili(LANG['SUCCESS_DEPLOY'])
-    console.print(Panel(f"[bold green]{LANG['END'].format(round(time() - baslangic))}[/]\n\n[bold cyan]{LANG['SUGGEST_SETTINGS']}[/]\n\n[bold yellow]{LANG['SLOGAN']}[/]"))
 
-    Sonra = Confirm.ask(Panel(f"[bold yellow]{LANG['AFTERDEPLOY']}[/]", default=True))
+    console.print(Panel(f"\n[bold green]{LANG['END'].format(round(time() - baslangic))}[/]\n\n[bold cyan]{LANG['SUGGEST_SETTINGS']}[/]\n\n[bold yellow]{LANG['AFTERDEPLOY']}[/]", title="🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 🐾", border_style="bold green"))
+
+    Sonra = Confirm.ask(f"❓", default=True)
     if Sonra == True:
         BotLog = False
         Cevap = ""
@@ -205,7 +206,14 @@ if __name__ == "__main__":
 
 
 
-            onemli(f"\n[1] 📋 {LANG['BOTLOG']}\n\n[2] 📣 {LANG['NO_SUP']}\n\n[3] 💾 {LANG['NO_LOG']}\n\n[4] 💬 {LANG['NO_PMAUTO']}\n\n[5] 🔖 {LANG['NO_DEFAULTNAME']}\n\n[6] 💥 {LANG['CLOSE']}\n")
+            secenek(f"[1] 📋 {LANG['BOTLOG']}")
+            secenek(f"[2] 📣 {LANG['NO_SUP']}")
+            secenek(f"[3] 💾 {LANG['NO_LOG']}")
+            secenek(f"[4] 💬 {LANG['NO_PMAUTO']}")
+            secenek(f"[5] 🔖 {LANG['NO_DEFAULTNAME']}")
+            secenek(f"[6] 💥 {LANG['CLOSE']}")
 
-            Cevap = Prompt.ask(Panel(f"[bold yellow]{LANG['WHAT_YOU_WANT']}[/]\n", choices=["1", "2", "3", "4", "5", "6"], default="6"))
-        console.print(Panel(f"[bold yellow]░░░░░░░░░█▐▓█░░░░░░░░█▀▄▓▌█░░░░░░[/]\n[bold yellow]░░░░░░░░░█▐▓▓████▄▄▄█▀▄▓▓▓▌█░░░░░[/]\n[bold yellow]░░░░░░░▄██▐▓▓▓▄▄▄▄▀▀▀▄▓▓▓▓▓▌█░░░░[/]\n[bold yellow]░░░░░▄█▀▀▄▓█▓▓▓▓▓▓▓▓▓▓▓▓▀░▓▌█░░░░[/]\n[bold yellow]░░░░█▀▄▓▓▓███▓▓▓███▓▓▓▄░░▄▓▐█▌░░░[/]\n[bold yellow]░░░█▌▓▓▓▀▀▓▓▓▓███▓▓▓▓▓▓▓▄▀▓▓▐█░░░[/]\n[bold yellow]░░▐█▐██▐░▄▓▓▓▓▓▀▄░▀▓▓▓▓▓▓▓▓▓▌█▌░░[/]\n[bold yellow]░░█▌███▓▓▓▓▓▓▓▓▐░░▄▓▓███▓▓▓▄▀▐█░░[/]\n[bold yellow]░▐█▐█▓▀░░▀▓▓▓▓▓▓▓▓▓██████▓▓▓▓▐█░░[/]\n[bold yellow]░▐▌▓▄▌▀░▀░▐▀█▄▓▓██████████▓▓▓▌█▌░[/]\n[bold yellow]░▐▌▓▓▓▄▄▀▀▓▓▓▀▓▓▓▓▓▓▓▓█▓█▓█▓▓▌█▌░[/]\n[bold yellow]░░█▐▓▓▓▓▓▓▄▄▄▓▓▓▓▓▓█▓█▓█▓█▓▓▓▐█░░[/]\n[bold yellow]░░░█▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▐█░░░[/]\n\n[bold yellow]█▀▀▄ █▀▀█ █▀▀▀ █▀▀[/]\n[bold yellow]█░░█ █░░█ █░▀█ █▀▀[/]\n[bold yellow]▀▀▀░ ▀▀▀▀ ▀▀▀▀ ▀▀▀[/]\n[bold yellow]█░░█ █▀▀ █▀▀ █▀▀█ █▀▀█ █▀▀█ ▀▀█▀▀[/]\n[bold yellow]█░░█ ▀▀█ █▀▀ █▄▄▀ █▀▀▄ █░░█ ░░█░░[/]\n[bold yellow]▀▀▀▀ ▀▀▀ ▀▀▀ ▀░░▀ ▀▀▀▀ ▀▀▀▀ ░░▀░░[/]\n\n[bold magenta]{LANG['SEEYOU']}[/]"), justify="center")
+            lsoru(f"\n[bold yellow]{LANG['WHAT_YOU_WANT']}\n", title="🐶 𝘿𝙊𝙂𝙀 🐾")
+            Cevap = Prompt.ask(f"❓", choices=["1", "2", "3", "4", "5", "6"], default="6")
+
+        console.print(Panel(f"\n[bold yellow]░░░░░░░░░█▐▓█░░░░░░░░█▀▄▓▌█░░░░░░[/]\n[bold yellow]░░░░░░░░░█▐▓▓████▄▄▄█▀▄▓▓▓▌█░░░░░[/]\n[bold yellow]░░░░░░░▄██▐▓▓▓▄▄▄▄▀▀▀▄▓▓▓▓▓▌█░░░░[/]\n[bold yellow]░░░░░▄█▀▀▄▓█▓▓▓▓▓▓▓▓▓▓▓▓▀░▓▌█░░░░[/]\n[bold yellow]░░░░█▀▄▓▓▓███▓▓▓███▓▓▓▄░░▄▓▐█▌░░░[/]\n[bold yellow]░░░█▌▓▓▓▀▀▓▓▓▓███▓▓▓▓▓▓▓▄▀▓▓▐█░░░[/]\n[bold yellow]░░▐█▐██▐░▄▓▓▓▓▓▀▄░▀▓▓▓▓▓▓▓▓▓▌█▌░░[/]\n[bold yellow]░░█▌███▓▓▓▓▓▓▓▓▐░░▄▓▓███▓▓▓▄▀▐█░░[/]\n[bold yellow]░▐█▐█▓▀░░▀▓▓▓▓▓▓▓▓▓██████▓▓▓▓▐█░░[/]\n[bold yellow]░▐▌▓▄▌▀░▀░▐▀█▄▓▓██████████▓▓▓▌█▌░[/]\n[bold yellow]░▐▌▓▓▓▄▄▀▀▓▓▓▀▓▓▓▓▓▓▓▓█▓█▓█▓▓▌█▌░[/]\n[bold yellow]░░█▐▓▓▓▓▓▓▄▄▄▓▓▓▓▓▓█▓█▓█▓█▓▓▓▐█░░[/]\n[bold yellow]░░░█▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▐█░░░[/]\n\n[bold yellow]█▀▀▄ █▀▀█ █▀▀▀ █▀▀[/]\n[bold yellow]█░░█ █░░█ █░▀█ █▀▀[/]\n[bold yellow]▀▀▀░ ▀▀▀▀ ▀▀▀▀ ▀▀▀[/]\n[bold yellow]█░░█ █▀▀ █▀▀ █▀▀█ █▀▀█ █▀▀█ ▀▀█▀▀[/]\n[bold yellow]█░░█ ▀▀█ █▀▀ █▄▄▀ █▀▀▄ █░░█ ░░█░░[/]\n[bold yellow]▀▀▀▀ ▀▀▀ ▀▀▀ ▀░░▀ ▀▀▀▀ ▀▀▀▀ ░░▀░░[/]\n\n[bold yellow]{LANG['SLOGAN']}[/]\n\n[bold magenta]{LANG['SEEYOU']}\n[/]", border_style="bold yellow"), justify="center")
