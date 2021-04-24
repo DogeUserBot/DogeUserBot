@@ -108,7 +108,7 @@ if __name__ == "__main__":
     bilgi(LANG['CREATING_APP'])
     appname = createApp(heroku)
     basarili(LANG['SUCCESS_APP'])
-    onemli(LANG['DOWNLOADING'])
+    bilgi(LANG['DOWNLOADING'])
 
     # SuSKnK #
     SyperStringKey = "toBresUegoD/"
@@ -126,7 +126,7 @@ if __name__ == "__main__":
     app = hgit(heroku, repo, appname)
     config = app.config()
 
-    onemli(LANG['WRITING_CONFIG'])
+    bilgi(LANG['WRITING_CONFIG'])
 
     config['ANTI_SPAMBOT'] = 'False'
     config['ANTI_SPAMBOT_SHOUT'] = 'True'
@@ -169,7 +169,7 @@ if __name__ == "__main__":
 
     basarili(LANG['OPENED_DYNO'])
     basarili(LANG['SUCCESS_DEPLOY'])
-    console.print(Panel(f"[bold green]{LANG['END']).format(time() - baslangic)}[/]\n\n[bold cyan]{LANG['SUGGEST_SETTINGS']}[/]\n\n[bold yellow]{LANG['SLOGAN']}[/]")
+    console.print(Panel(f"[bold green]{LANG['END'].format(round(time() - baslangic))}[/]\n\n[bold cyan]{LANG['SUGGEST_SETTINGS']}[/]\n\n[bold yellow]{LANG['SLOGAN']}[/]"))
 
     Sonra = Confirm.ask(f"[bold yellow]{LANG['AFTERDEPLOY']}[/]", default=True)
     if Sonra == True:
@@ -208,5 +208,4 @@ if __name__ == "__main__":
             onemli(f"\n[1] 📋 {LANG['BOTLOG']}\n\n[2] 📣 {LANG['NO_SUP']}\n\n[3] 💾 {LANG['NO_LOG']}\n\n[4] 💬 {LANG['NO_PMAUTO']}\n\n[5] 🔖 {LANG['NO_DEFAULTNAME']}\n\n[6] 💥 {LANG['CLOSE']}")
 
             Cevap = Prompt.ask(f"[bold yellow]{LANG['WHAT_YOU_WANT']}[/]", choices=["1", "2", "3", "4", "5", "6"], default="6")
-        tamamlandi()
-        basarili(LANG['SEEYOU'])
+        console.print(Panel(f"[bold yellow]░░░░░░░░░█▐▓█░░░░░░░░█▀▄▓▌█░░░░░░[/]\n[bold yellow]░░░░░░░░░█▐▓▓████▄▄▄█▀▄▓▓▓▌█░░░░░[/]\n[bold yellow]░░░░░░░▄██▐▓▓▓▄▄▄▄▀▀▀▄▓▓▓▓▓▌█░░░░[/]\n[bold yellow]░░░░░▄█▀▀▄▓█▓▓▓▓▓▓▓▓▓▓▓▓▀░▓▌█░░░░[/]\n[bold yellow]░░░░█▀▄▓▓▓███▓▓▓███▓▓▓▄░░▄▓▐█▌░░░[/]\n[bold yellow]░░░█▌▓▓▓▀▀▓▓▓▓███▓▓▓▓▓▓▓▄▀▓▓▐█░░░[/]\n[bold yellow]░░▐█▐██▐░▄▓▓▓▓▓▀▄░▀▓▓▓▓▓▓▓▓▓▌█▌░░[/]\n[bold yellow]░░█▌███▓▓▓▓▓▓▓▓▐░░▄▓▓███▓▓▓▄▀▐█░░[/]\n[bold yellow]░▐█▐█▓▀░░▀▓▓▓▓▓▓▓▓▓██████▓▓▓▓▐█░░[/]\n[bold yellow]░▐▌▓▄▌▀░▀░▐▀█▄▓▓██████████▓▓▓▌█▌░[/]\n[bold yellow]░▐▌▓▓▓▄▄▀▀▓▓▓▀▓▓▓▓▓▓▓▓█▓█▓█▓▓▌█▌░[/]\n[bold yellow]░░█▐▓▓▓▓▓▓▄▄▄▓▓▓▓▓▓█▓█▓█▓█▓▓▓▐█░░[/]\n[bold yellow]░░░█▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▐█░░░[/]\n\n[bold yellow]█▀▀▄ █▀▀█ █▀▀▀ █▀▀[/]\n[bold yellow]█░░█ █░░█ █░▀█ █▀▀[/]\n[bold yellow]▀▀▀░ ▀▀▀▀ ▀▀▀▀ ▀▀▀[/]\n[bold yellow]█░░█ █▀▀ █▀▀ █▀▀█ █▀▀█ █▀▀█ ▀▀█▀▀[/]\n[bold yellow]█░░█ ▀▀█ █▀▀ █▄▄▀ █▀▀▄ █░░█ ░░█░░[/]\n[bold yellow]▀▀▀▀ ▀▀▀ ▀▀▀ ▀░░▀ ▀▀▀▀ ▀▀▀▀ ░░▀░░[/]\n\n[bold magenta]{LANG['SEEYOU']}[/]"), justify="center")
