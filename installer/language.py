@@ -9,13 +9,15 @@
 
 from json import loads
 from rich.prompt import Prompt
+from rich.panel import Panel
+from rich.live_render import LiveRender
 from . import logo, console, basarili
 
 def importlang ():
     console.clear()
     logo()
     basarili("\n\n[1] Türkçe\n\n[2] Azərbaycanca\n\n[3] English\n\n[4] O'zbek\n")
-    Dil = Prompt.ask("[bold yellow]💬 Bir dil seçin\n💬 Please select a language\n[/]", choices=["1", "2", "3", "4"], default="1")
+    Dil = Prompt.ask(Panel(f"[bold yellow]💬 Bir dil seçin\n💬 Please select a language\n[/]", choices=["1", "2", "3", "4"], default="1"))
 
     if Dil == "1":
         COUNTRY = "Turkey"

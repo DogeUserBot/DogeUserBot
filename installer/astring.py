@@ -12,16 +12,16 @@ import os
 import sys
 import subprocess
 from installer import hata, bilgi, onemli, soru
-
 from telethon import TelegramClient, events, version
 from telethon.errors import SessionPasswordNeededError, PhoneCodeInvalidError, PasswordHashInvalidError, PhoneNumberInvalidError
 from telethon.network import ConnectionTcpAbridged
 from telethon.utils import get_display_name
 from telethon.sessions import StringSession
 from rich.prompt import Prompt
-from .language import LANG
+from rich.panel import Panel
+from rich.live_render import LiveRender
 from random import choice, randint
-
+from .language import LANG
 import requests
 import bs4
 
@@ -87,7 +87,7 @@ class InteractiveTelegramClient(TelegramClient):
 def main():
     bilgi(f"[1] {LANG['NEW']}\n[2] {LANG['OLD']}")
             
-    Sonuc = Prompt.ask(f"[bold yellow]{LANG['WHICH']}[/]", choices=["1", "2"], default="1")
+    Sonuc = Prompt.ask(Panel(f"[bold yellow]{LANG['WHICH']}[/]", choices=["1", "2"], default="1"))
 
     if Sonuc == "2":
         API_ID = soru(LANG['API_ID'])

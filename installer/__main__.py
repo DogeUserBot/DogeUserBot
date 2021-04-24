@@ -171,7 +171,7 @@ if __name__ == "__main__":
     basarili(LANG['SUCCESS_DEPLOY'])
     console.print(Panel(f"[bold green]{LANG['END'].format(round(time() - baslangic))}[/]\n\n[bold cyan]{LANG['SUGGEST_SETTINGS']}[/]\n\n[bold yellow]{LANG['SLOGAN']}[/]"))
 
-    Sonra = Confirm.ask(f"[bold yellow]{LANG['AFTERDEPLOY']}[/]", default=True)
+    Sonra = Confirm.ask(Panel(f"[bold yellow]{LANG['AFTERDEPLOY']}[/]", default=True))
     if Sonra == True:
         BotLog = False
         Cevap = ""
@@ -205,7 +205,7 @@ if __name__ == "__main__":
 
 
 
-            onemli(f"\n[1] 📋 {LANG['BOTLOG']}\n\n[2] 📣 {LANG['NO_SUP']}\n\n[3] 💾 {LANG['NO_LOG']}\n\n[4] 💬 {LANG['NO_PMAUTO']}\n\n[5] 🔖 {LANG['NO_DEFAULTNAME']}\n\n[6] 💥 {LANG['CLOSE']}")
+            onemli(f"\n[1] 📋 {LANG['BOTLOG']}\n\n[2] 📣 {LANG['NO_SUP']}\n\n[3] 💾 {LANG['NO_LOG']}\n\n[4] 💬 {LANG['NO_PMAUTO']}\n\n[5] 🔖 {LANG['NO_DEFAULTNAME']}\n\n[6] 💥 {LANG['CLOSE']}\n")
 
-            Cevap = Prompt.ask(f"[bold yellow]{LANG['WHAT_YOU_WANT']}[/]", choices=["1", "2", "3", "4", "5", "6"], default="6")
+            Cevap = Prompt.ask(Panel(f"[bold yellow]{LANG['WHAT_YOU_WANT']}[/]\n", choices=["1", "2", "3", "4", "5", "6"], default="6"))
         console.print(Panel(f"[bold yellow]░░░░░░░░░█▐▓█░░░░░░░░█▀▄▓▌█░░░░░░[/]\n[bold yellow]░░░░░░░░░█▐▓▓████▄▄▄█▀▄▓▓▓▌█░░░░░[/]\n[bold yellow]░░░░░░░▄██▐▓▓▓▄▄▄▄▀▀▀▄▓▓▓▓▓▌█░░░░[/]\n[bold yellow]░░░░░▄█▀▀▄▓█▓▓▓▓▓▓▓▓▓▓▓▓▀░▓▌█░░░░[/]\n[bold yellow]░░░░█▀▄▓▓▓███▓▓▓███▓▓▓▄░░▄▓▐█▌░░░[/]\n[bold yellow]░░░█▌▓▓▓▀▀▓▓▓▓███▓▓▓▓▓▓▓▄▀▓▓▐█░░░[/]\n[bold yellow]░░▐█▐██▐░▄▓▓▓▓▓▀▄░▀▓▓▓▓▓▓▓▓▓▌█▌░░[/]\n[bold yellow]░░█▌███▓▓▓▓▓▓▓▓▐░░▄▓▓███▓▓▓▄▀▐█░░[/]\n[bold yellow]░▐█▐█▓▀░░▀▓▓▓▓▓▓▓▓▓██████▓▓▓▓▐█░░[/]\n[bold yellow]░▐▌▓▄▌▀░▀░▐▀█▄▓▓██████████▓▓▓▌█▌░[/]\n[bold yellow]░▐▌▓▓▓▄▄▀▀▓▓▓▀▓▓▓▓▓▓▓▓█▓█▓█▓▓▌█▌░[/]\n[bold yellow]░░█▐▓▓▓▓▓▓▄▄▄▓▓▓▓▓▓█▓█▓█▓█▓▓▓▐█░░[/]\n[bold yellow]░░░█▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▐█░░░[/]\n\n[bold yellow]█▀▀▄ █▀▀█ █▀▀▀ █▀▀[/]\n[bold yellow]█░░█ █░░█ █░▀█ █▀▀[/]\n[bold yellow]▀▀▀░ ▀▀▀▀ ▀▀▀▀ ▀▀▀[/]\n[bold yellow]█░░█ █▀▀ █▀▀ █▀▀█ █▀▀█ █▀▀█ ▀▀█▀▀[/]\n[bold yellow]█░░█ ▀▀█ █▀▀ █▄▄▀ █▀▀▄ █░░█ ░░█░░[/]\n[bold yellow]▀▀▀▀ ▀▀▀ ▀▀▀ ▀░░▀ ▀▀▀▀ ▀▀▀▀ ░░▀░░[/]\n\n[bold magenta]{LANG['SEEYOU']}[/]"), justify="center")
