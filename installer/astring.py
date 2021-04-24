@@ -85,7 +85,7 @@ class InteractiveTelegramClient(TelegramClient):
                      hata(LANG['INVALID_2FA'])
 
 def main():
-    lsoru(f"[1] {LANG['NEW']}\n\n[2] {LANG['OLD']}[/]")
+    lsoru(f"[1] {LANG['NEW']}\n\n[2] {LANG['OLD']}")
     lsoru(f"[bold yellow]{LANG['WHICH']}[/]")
     Sonuc = Prompt.ask(f"❓", choices=["1", "2"], default="1")
 
