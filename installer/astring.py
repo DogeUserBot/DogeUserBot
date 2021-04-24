@@ -139,8 +139,7 @@ def main():
                 hata(LANG['CANT_CREATE_APP'])
                 exit(1)
 
-            bilgi(LANG['CREATED'])
-            bilgi(LANG['GETTING_API'])
+            bilgi(f"{LANG['CREATED']}\n\n{LANG['GETTING_API']}")
             newapp = requests.get("https://my.telegram.org/apps", cookies=cookie).text
             newsoup = bs4.BeautifulSoup(newapp, features="html.parser")
 
@@ -149,11 +148,10 @@ def main():
             app_id = g_inputs[0].string
             api_hash = g_inputs[1].string
             bilgi(LANG['INFOS'])
-            onemli(f"{LANG['APIID']} {app_id}")
-            onemli(f"{LANG['APIHASH']} {api_hash}")
+            onemli(f"\n⏩ API ID {app_id}\n\n⏩ API HASH {api_hash}\n")
             bilgi(LANG['STRING_GET'])
+
             client = InteractiveTelegramClient(StringSession(), app_id, api_hash, numara)
-        
             return client.session.save(), app_id, api_hash
         elif soup.title.string == "App configuration":
             bilgi(LANG['SCRAPING'])
@@ -161,8 +159,7 @@ def main():
             app_id = g_inputs[0].string
             api_hash = g_inputs[1].string
             bilgi(LANG['INFOS'])
-            onemli(Panel(f"{LANG['APIID']} {app_id}"))
-            onemli(Panel(f"{LANG['APIHASH']} {api_hash}"))
+            onemli(f"\n⏩ API ID {app_id}\n\n⏩ API HASH {api_hash}\n")
             bilgi(LANG['STRING_GET'])
 
             client = InteractiveTelegramClient(StringSession(), app_id, api_hash, numara)

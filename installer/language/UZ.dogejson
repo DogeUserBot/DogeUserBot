@@ -72,8 +72,6 @@
             "CREATED": "(i) Dastur muvaffaqiyatli yaratildi!",
             "GETTING_API": "(i) API ID/HASH olinmoqda...",
             "INFOS": "(i) Ma'lumot keltirildi! Agar xohlasangiz, ularni yozishingiz mumkin.",
-            "APIID": "(i) API ID: ",
-            "APIHASH": "(i) API HASH: ",
             "STRING_GET": "(i) StringSession olinmoqda...",
             "SCRAPING": "(i) Siz allaqachon ariza yaratdingiz. API ID/HASH tortib olinmoqda...",
             "ERROR": "(!) Biroz xatolik uchradi.",

@@ -76,8 +76,6 @@
             "CREATED": "✅ Tətbiqinizi yaratdım!\n",
             "GETTING_API": "⏳ API ID ve HASH-i alıram...",
             "INFOS": "✅ Məlumat gətirmişəm!\n📋 İstədiyiniz yerdə onları yaza bilərsiniz. \n",
-            "APIID": "👉 API ID: ",
-            "APIHASH": "👉 API HASH: ",
             "STRING_GET": "\n⏳ String alıram...",
             "SCRAPING": "✅ Tətbiq artıq yaradıldı. \n⏳ API ID və HASH-i gətirirəm...",
             "ERROR": "(🔸 Məsih yox! Bir şey səhv oldu. ⚠️ Xəta baş verdi.)\n",

@@ -72,8 +72,6 @@
             "CREATED": "(i) The application was created successfully!",
             "GETTING_API": "(i) Getting API ID/HASH...",
             "INFOS": "(i) The Informations Has Been Brought! You can note them if you want.",
-            "APIID": "(i) API ID: ",
-            "APIHASH": "(i) API HASH: ",
             "STRING_GET": "(i) Getting StringSession...",
             "SCRAPING": "(I) You Have Already Created An Application. Pulling API ID/HASH...",
             "ERROR": "(!) An Error Occurred.",

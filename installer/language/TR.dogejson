@@ -7,8 +7,8 @@
         "MAIN": {
             "INVALID_KEY": "🔴 API Key'iniz yanlış.\n\n🔰 Eğer herhangi bir fikriniz yoksa @DogeSup grubuma #hapikey yazın.\n\n🔰 Ve lütfen kurulum kodunu tekrar yapıştırarak kurulumu yeniden başlatın.",
             "HEROKU_KEY": "🔢 Heroku hesabınızın API Key'ini yapıştırın: ",
-            "HEROKU_KEY_LOGIN": "\n⏳ Heroku hesabınıza giriyorum...",
-            "LOGGED": "✅ Girdim!\n",
+            "HEROKU_KEY_LOGIN": "⏳ Heroku hesabınıza giriyorum...",
+            "LOGGED": "✅ Girdim!",
             "GETTING_STRING_SESSION": "⏳ StringSession alacağım...",
             "SUCCESS_STRING": "\n✅ StringSession aldım!\n",
             "CREATING_APP": "⏳ Heroku'da uygulamanızı oluşturuyorum...",
@@ -78,12 +78,10 @@
             "CREATED": "✅ Uygulamanızı oluşturdum!\n",
             "GETTING_API": "⏳ API ID & HASH'i alıyorum...",
             "INFOS": "✅ Bilgileri getirdim! \n📋 İsterseniz bunları herhangi bir yere not edebilirsiniz.",
-            "APIID": "⏩ API ID: ",
-            "APIHASH": "⏩ API HASH: ",
             "STRING_GET": "\n⏳ StringSession alıyorum...",
             "SCRAPING": "\n⏳ API ID & HASH'i getiriyorum...",
-            "ERROR": "🔴 Hay aksi! \n🐾 Bir şeyler ters gitti. \n\n❗️ Hata!",
-            "ERRCHOOSE": "🔴 Hay aksi! \n☹️ Neyden bahsettiğin hakkında fikrim yok. \n\n🐾 Bilmediğim bir şey seçtin!",
+            "ERROR": "🔴 Hay aksi! \n🐾 Bir şeyler ters gitti. \n❗️ Hata oluştu!",
+            "ERRCHOOSE": "🔴 Hay aksi! \n☹️ Neyden bahsettiğin hakkında fikrim yok. \n🐾 Bilmediğim bir şey seçtin!",
             "NEW": "🍃 YENİ (Öneririm!)",
             "OLD": "🍂 ESKİ (Yeni yöntem çalışmadığında kullanabilirsiniz.)"
         }
