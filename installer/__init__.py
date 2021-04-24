@@ -18,10 +18,10 @@ def hata (text):
    console.print(Panel(text, title="🐶 𝘿𝙊𝙂𝙀 🐾", style="bold red"))
    
 def bilgi (text):
-   console.print(text, style="white")
+   console.print(Panel(text, style="white"))
    
 def basarili (text):
-   console.print(text, style="bold green")
+   console.print(Panel(text, style="bold green"))
    
 def secenek (text):
 	console.print(Panel(text, style="bold white", border_style="bold white"))
@@ -30,7 +30,7 @@ def lsoru (text):
    console.print(Panel(text, style="bold white", border_style="bold yellow"))  
 
 def onemli (text):
-   console.print(text, style="bold cyan")
+   console.print(Panel(text, style="bold cyan"))
 
 def uyari (text):
    console.print(Panel(text, style="bold cyan", border_style="bold red"))
