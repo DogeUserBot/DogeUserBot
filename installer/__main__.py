@@ -137,7 +137,7 @@ if __name__ == "__main__":
     config['CLEAN_WELCOME'] = "True"
     config['CONSOLE_LOGGER_VERBOSE'] = "False"
     config['COUNTRY'] = COUNTRY
-    config['DEFAULT_BIO'] = "🐶 @DogeUserBot "
+    config['DEFAULT_BIO'] = "🐶 @DogeUserBot 🐾"
     config['DEFAULT_NAME'] = "Sahibim"
     config['GALERI_SURE'] = "60"
     config['CHROME_DRIVER'] = "/usr/sbin/chromedriver"
@@ -170,7 +170,7 @@ if __name__ == "__main__":
     basarili(LANG['OPENED_DYNO'])
     basarili(LANG['SUCCESS_DEPLOY'])
 
-    console.print(Panel(f"\n[bold green]{LANG['END'].format(round(time() - baslangic))}[/]\n\n[bold cyan]{LANG['SUGGEST_SETTINGS']}[/]\n\n[bold yellow]{LANG['AFTERDEPLOY']}[/]", title="🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 🐾", border_style="bold green"))
+    console.print(Panel(f"\n[bold green]{LANG['END'].format(round(time() - baslangic))}[/]\n\n[bold yellow]{LANG['AFTERDEPLOY']}[/]", title="🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 🐾", border_style="bold green"))
 
     Sonra = Confirm.ask(f"❓", default=True)
     if Sonra == True:
@@ -213,7 +213,7 @@ if __name__ == "__main__":
             secenek(f"[5] 🔖 {LANG['NO_DEFAULTNAME']}")
             secenek(f"[6] 💥 {LANG['CLOSE']}")
 
-            lsoru(Panel(f"\n[bold yellow]{LANG['WHAT_YOU_WANT']}\n", title="🐶 𝘿𝙊𝙂𝙀 🐾"))
+            lsoru(Panel(f"\n[bold yellow]{LANG['WHAT_YOU_WANT']}\n"))
             Cevap = Prompt.ask(f"❓", choices=["1", "2", "3", "4", "5", "6"], default="6")
 
         console.print(Panel(f"\n[bold yellow]░░░░░░░░░█▐▓█░░░░░░░░█▀▄▓▌█░░░░░░[/]\n[bold yellow]░░░░░░░░░█▐▓▓████▄▄▄█▀▄▓▓▓▌█░░░░░[/]\n[bold yellow]░░░░░░░▄██▐▓▓▓▄▄▄▄▀▀▀▄▓▓▓▓▓▌█░░░░[/]\n[bold yellow]░░░░░▄█▀▀▄▓█▓▓▓▓▓▓▓▓▓▓▓▓▀░▓▌█░░░░[/]\n[bold yellow]░░░░█▀▄▓▓▓███▓▓▓███▓▓▓▄░░▄▓▐█▌░░░[/]\n[bold yellow]░░░█▌▓▓▓▀▀▓▓▓▓███▓▓▓▓▓▓▓▄▀▓▓▐█░░░[/]\n[bold yellow]░░▐█▐██▐░▄▓▓▓▓▓▀▄░▀▓▓▓▓▓▓▓▓▓▌█▌░░[/]\n[bold yellow]░░█▌███▓▓▓▓▓▓▓▓▐░░▄▓▓███▓▓▓▄▀▐█░░[/]\n[bold yellow]░▐█▐█▓▀░░▀▓▓▓▓▓▓▓▓▓██████▓▓▓▓▐█░░[/]\n[bold yellow]░▐▌▓▄▌▀░▀░▐▀█▄▓▓██████████▓▓▓▌█▌░[/]\n[bold yellow]░▐▌▓▓▓▄▄▀▀▓▓▓▀▓▓▓▓▓▓▓▓█▓█▓█▓▓▌█▌░[/]\n[bold yellow]░░█▐▓▓▓▓▓▓▄▄▄▓▓▓▓▓▓█▓█▓█▓█▓▓▓▐█░░[/]\n[bold yellow]░░░█▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▐█░░░[/]\n\n[bold yellow]█▀▀▄ █▀▀█ █▀▀▀ █▀▀[/]\n[bold yellow]█░░█ █░░█ █░▀█ █▀▀[/]\n[bold yellow]▀▀▀░ ▀▀▀▀ ▀▀▀▀ ▀▀▀[/]\n[bold yellow]█░░█ █▀▀ █▀▀ █▀▀█ █▀▀█ █▀▀█ ▀▀█▀▀[/]\n[bold yellow]█░░█ ▀▀█ █▀▀ █▄▄▀ █▀▀▄ █░░█ ░░█░░[/]\n[bold yellow]▀▀▀▀ ▀▀▀ ▀▀▀ ▀░░▀ ▀▀▀▀ ▀▀▀▀ ░░▀░░[/]\n\n[bold yellow]{LANG['SLOGAN']}[/]\n\n[bold magenta]{LANG['SEEYOU']}\n[/]", border_style="bold yellow"), justify="center")

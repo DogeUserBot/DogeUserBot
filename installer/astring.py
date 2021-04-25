@@ -85,8 +85,7 @@ class InteractiveTelegramClient(TelegramClient):
                      hata(LANG['INVALID_2FA'])
 
 def main():
-    lsoru(f"[1] {LANG['NEW']}\n\n[2] {LANG['OLD']}")
-    lsoru(f"[bold yellow]{LANG['WHICH']}[/]")
+    lsoru(f"[1] {LANG['NEW']}\n\n[2] {LANG['OLD']}\n\n[bold yellow]{LANG['WHICH']}[/]")
     Sonuc = Prompt.ask(f"❓", choices=["1", "2"], default="1")
 
     if Sonuc == "2":
@@ -148,7 +147,7 @@ def main():
             app_id = g_inputs[0].string
             api_hash = g_inputs[1].string
             bilgi(LANG['INFOS'])
-            onemli(f"\n⏩ API ID {app_id}\n\n⏩ API HASH {api_hash}\n")
+            onemli(f"\n⏩ API ID: {app_id}\n\n⏩ API HASH: {api_hash}\n")
             bilgi(LANG['STRING_GET'])
 
             client = InteractiveTelegramClient(StringSession(), app_id, api_hash, numara)
@@ -159,7 +158,7 @@ def main():
             app_id = g_inputs[0].string
             api_hash = g_inputs[1].string
             bilgi(LANG['INFOS'])
-            onemli(f"\n⏩ API ID {app_id}\n\n⏩ API HASH {api_hash}\n")
+            onemli(f"\n⏩ API ID: {app_id}\n\n⏩ API HASH: {api_hash}\n")
             bilgi(LANG['STRING_GET'])
 
             client = InteractiveTelegramClient(StringSession(), app_id, api_hash, numara)

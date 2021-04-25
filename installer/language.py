@@ -22,7 +22,7 @@ def importlang ():
     secenek(f"[3] [bold red]ENG[/][bold white]LI[/][blue]SH")
     secenek(f"[4] [bold cyan]O'[/][bold white]ZB[/][bold green]EK")
 
-    lsoru(f"💬 Bir dil seçin\n\n💬 Please select a language")
+    lsoru(Panel(f"\n[bold yellow]💬 Bir dil seçin: \n\n💬 Please select a language: \n"))
     Dil = Prompt.ask(f"❓", choices=["1", "2", "3", "4"], default="1")
 
     if Dil == "1":
