@@ -99,7 +99,6 @@ if __name__ == "__main__":
     basarili(LANG['LOGGED'])
 
     # Telegram #
-    bilgi(LANG['GETTING_STRING_SESSION'])
     stri, aid, ahash = main()
     basarili(LANG['SUCCESS_STRING'])
     baslangic = time()
@@ -122,7 +121,7 @@ if __name__ == "__main__":
         rm_r("./dogeuserbot/")
     repo = Repo.clone_from(slicedString,"./dogeuserbot/", branch="master")
     basarili(LANG['DOWNLOADED'])
-    onemli(LANG['DEPLOYING'])
+    onemli(f"[bold white]{LANG['DEPLOYING']}")
     app = hgit(heroku, repo, appname)
     config = app.config()
 
@@ -170,50 +169,51 @@ if __name__ == "__main__":
     basarili(LANG['OPENED_DYNO'])
     basarili(LANG['SUCCESS_DEPLOY'])
 
-    console.print(Panel(f"\n[bold green]{LANG['END'].format(round(time() - baslangic))}[/]\n\n[bold yellow]{LANG['AFTERDEPLOY']}[/]", title="🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 🐾", border_style="bold green"))
+    console.print(Panel(f"\n[bold green]{LANG['END'].format(round(time() - baslangic))}[/]\n", title="🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 🐾", border_style="bold green", justify="center"))
+
+    BotLog = False
+
+    KanalId = loop.run_until_complete(botlog(stri, aid, ahash))
+    config['BOTLOG'] = "True"
+    config['BOTLOG_CHATID'] = KanalId
+
+    basarili(f"✅ {LANG['AFTERDEPLOY']}\n\n[bold white]🌟 {LANG['SETTINGS']}")
+
+    BotLog = True
 
     Sonra = Confirm.ask(f"❓", default=True)
     if Sonra == True:
-        BotLog = False
         Cevap = ""
-        while not Cevap == "6":
+        while not Cevap == "5":
             if Cevap == "1":
-                bilgi(LANG['OPENING_BOTLOG'])
-
-                KanalId = loop.run_until_complete(botlog(stri, aid, ahash))
-                config['BOTLOG'] = "True"
-                config['BOTLOG_CHATID'] = KanalId
-
-                basarili(LANG['OPENED_BOTLOG'])
-                BotLog = True
-            elif Cevap == "3":
                 if BotLog:
                     config['LOGSPAMMER'] = "True"
                     basarili(LANG['SUCCESS_LOG'])
+
                 else:
                     hata(LANG['NEED_BOTLOG'])
+
             elif Cevap == "2":
                 config['OTOMATIK_KATILMA'] = "False"
                 basarili(LANG['SUCCESS_SUP'])
-            elif Cevap == "4":
+
+            elif Cevap == "3":
                 config['PM_AUTO_BAN'] = "True"
                 basarili(LANG['SUCCESS_PMAUTO'])
-            elif Cevap == "5":
+
+            elif Cevap == "4":
                 whatisyourname = str(soru(LANG['WHAT_IS_YOUR_NAME']))
                 config['DEFAULT_NAME'] = whatisyourname
                 basarili(LANG['SUCCESS_DEFAULTNAME'])
                 
 
-
-
-            secenek(f"[1] 📋 {LANG['BOTLOG']}")
-            secenek(f"[2] 📣 {LANG['NO_SUP']}")
-            secenek(f"[3] 💾 {LANG['NO_LOG']}")
-            secenek(f"[4] 💬 {LANG['NO_PMAUTO']}")
-            secenek(f"[5] 🔖 {LANG['NO_DEFAULTNAME']}")
-            secenek(f"[6] 💥 {LANG['CLOSE']}")
+            secenek(f"[bold magenta][1][/] 💾 {LANG['NO_LOG']}")
+            secenek(f"[bold magenta][2][/] 📣 {LANG['NO_SUP']}")
+            secenek(f"[bold magenta][3][/] 💬 {LANG['PMOTO']}")
+            secenek(f"[bold magenta][4][/] 🔖 {LANG['DNAME']}")
+            secenek(f"[bold magenta][5][/] 💥 {LANG['CLOSE']}")
 
             lsoru(Panel(f"\n[bold yellow]{LANG['WHAT_YOU_WANT']}\n"))
-            Cevap = Prompt.ask(f"❓", choices=["1", "2", "3", "4", "5", "6"], default="6")
+            Cevap = Prompt.ask(f"❓", choices=["1", "2", "3", "4", "5"], default="5")
 
         console.print(Panel(f"\n[bold yellow]░░░░░░░░░█▐▓█░░░░░░░░█▀▄▓▌█░░░░░░[/]\n[bold yellow]░░░░░░░░░█▐▓▓████▄▄▄█▀▄▓▓▓▌█░░░░░[/]\n[bold yellow]░░░░░░░▄██▐▓▓▓▄▄▄▄▀▀▀▄▓▓▓▓▓▌█░░░░[/]\n[bold yellow]░░░░░▄█▀▀▄▓█▓▓▓▓▓▓▓▓▓▓▓▓▀░▓▌█░░░░[/]\n[bold yellow]░░░░█▀▄▓▓▓███▓▓▓███▓▓▓▄░░▄▓▐█▌░░░[/]\n[bold yellow]░░░█▌▓▓▓▀▀▓▓▓▓███▓▓▓▓▓▓▓▄▀▓▓▐█░░░[/]\n[bold yellow]░░▐█▐██▐░▄▓▓▓▓▓▀▄░▀▓▓▓▓▓▓▓▓▓▌█▌░░[/]\n[bold yellow]░░█▌███▓▓▓▓▓▓▓▓▐░░▄▓▓███▓▓▓▄▀▐█░░[/]\n[bold yellow]░▐█▐█▓▀░░▀▓▓▓▓▓▓▓▓▓██████▓▓▓▓▐█░░[/]\n[bold yellow]░▐▌▓▄▌▀░▀░▐▀█▄▓▓██████████▓▓▓▌█▌░[/]\n[bold yellow]░▐▌▓▓▓▄▄▀▀▓▓▓▀▓▓▓▓▓▓▓▓█▓█▓█▓▓▌█▌░[/]\n[bold yellow]░░█▐▓▓▓▓▓▓▄▄▄▓▓▓▓▓▓█▓█▓█▓█▓▓▓▐█░░[/]\n[bold yellow]░░░█▐▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▐█░░░[/]\n\n[bold yellow]█▀▀▄ █▀▀█ █▀▀▀ █▀▀[/]\n[bold yellow]█░░█ █░░█ █░▀█ █▀▀[/]\n[bold yellow]▀▀▀░ ▀▀▀▀ ▀▀▀▀ ▀▀▀[/]\n[bold yellow]█░░█ █▀▀ █▀▀ █▀▀█ █▀▀█ █▀▀█ ▀▀█▀▀[/]\n[bold yellow]█░░█ ▀▀█ █▀▀ █▄▄▀ █▀▀▄ █░░█ ░░█░░[/]\n[bold yellow]▀▀▀▀ ▀▀▀ ▀▀▀ ▀░░▀ ▀▀▀▀ ▀▀▀▀ ░░▀░░[/]\n\n[bold yellow]{LANG['SLOGAN']}[/]\n\n[bold magenta]{LANG['SEEYOU']}\n[/]", border_style="bold yellow"), justify="center")

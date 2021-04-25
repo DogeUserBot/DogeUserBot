@@ -11,16 +11,16 @@ from json import loads
 from rich.prompt import Prompt
 from rich.panel import Panel
 from rich.live_render import LiveRender
-from . import logo, console, secenek, lsoru
+from . import logo, console, dilsec, lsoru
 
 def importlang ():
     console.clear()
     logo()
 
-    secenek(f"[1] [bold red]TÜRK[/][bold white]ÇE")
-    secenek(f"[2] [bold cyan]AZƏR[/][bold red]BAYCAN[/][bold green]CA")
-    secenek(f"[3] [bold red]ENG[/][bold white]LI[/][blue]SH")
-    secenek(f"[4] [bold cyan]O'[/][bold white]ZB[/][bold green]EK")
+    dilsec(f"[1] [bold red]TÜRK[/][bold white]ÇE")
+    dilsec(f"[2] [bold cyan]AZƏR[/][bold red]BAYCAN[/][bold green]CA")
+    dilsec(f"[3] [bold red]ENG[/][bold white]LI[/][blue]SH")
+    dilsec(f"[4] [bold cyan]O'[/][bold white]ZB[/][bold green]EK")
 
     lsoru(Panel(f"\n[bold yellow]💬 Bir dil seçin: \n\n💬 Please select a language: \n"))
     Dil = Prompt.ask(f"❓", choices=["1", "2", "3", "4"], default="1")

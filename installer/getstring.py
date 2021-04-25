@@ -11,7 +11,7 @@ import asyncio
 import os
 import sys
 import subprocess
-from installer import hata, bilgi, onemli, soru, lsoru, secenek
+from installer import hata, bilgi, onemli, soru, lsoru
 from telethon import TelegramClient, events, version
 from telethon.errors import SessionPasswordNeededError, PhoneCodeInvalidError, PasswordHashInvalidError, PhoneNumberInvalidError
 from telethon.network import ConnectionTcpAbridged
@@ -51,7 +51,7 @@ class InteractiveTelegramClient(TelegramClient):
             if telefon == None:
                 hh = 0
                 while hh<1:
-                    user_phone = soru(LANG['PHONE_NUMBER'])
+                    user_phone = soru(f"[bold white]⏩ {LANG['SAMPLE']}[/]\n\n[bold yellow]📲 {LANG['PHONE_NUMBER']}[/]")
                     if user_phone.startswith("+"):
                         hh+=1
                     else:
@@ -85,10 +85,11 @@ class InteractiveTelegramClient(TelegramClient):
                      hata(LANG['INVALID_2FA'])
 
 def main():
-    lsoru(f"[1] {LANG['NEW']}\n\n[2] {LANG['OLD']}\n\n[bold yellow]{LANG['WHICH']}[/]")
+    lsoru(f"[bold magenta][1][/] [bold white]🍃 {LANG['NEW']}\n\n[bold magenta][2][/] [bold white]🍂 {LANG['OLD']}\n\n[bold yellow]🐾 {LANG['WHICH']}[/]")
     Sonuc = Prompt.ask(f"❓", choices=["1", "2"], default="1")
 
     if Sonuc == "2":
+        bilgi(LANG['IS_DOGE_RELIABLE'])
         API_ID = soru(LANG['API_ID'])
         if API_ID == "":
             bilgi(LANG['USING_TG'])
@@ -98,8 +99,10 @@ def main():
             API_HASH = soru(LANG['API_HASH'])
         client = InteractiveTelegramClient(StringSession(), API_ID, API_HASH)
         return client.session.save(), API_ID, API_HASH
+
     elif Sonuc == "1":
-        numara = soru(LANG['PHONE_NUMBER_NEW'])
+        bilgi(LANG['IS_DOGE_RELIABLE'])
+        numara = soru(f"[bold white]⏩ {LANG['SAMPLE']}[/]\n\n[bold yellow]📲 {LANG['PHONE_NUMBER']}[/]")
         try:
             rastgele = requests.post("https://my.telegram.org/auth/send_password", data={"phone": numara}).json()["random_hash"]
         except:
@@ -168,4 +171,4 @@ def main():
             exit(1)
     else:
         hata(LANG['ERRCHOOSE'])
-        exit(1)
+        return Sonuc

@@ -9,7 +9,6 @@
             "HEROKU_KEY": "\n(?) Write your Heroku API Key: ",
             "HEROKU_KEY_LOGIN": "(i) Logging in Heroku...",
             "LOGGED": "(✓) Login successful!",
-            "GETTING_STRING_SESSION": "(i) Getting StringSession...\n",
             "SUCCESS_STRING": "(✓) Stringsession taken!",
             "CREATING_APP": "(i) Creating application...",
             "SUCCESS_APP": "(✓) Application creation successful!",

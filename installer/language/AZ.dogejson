@@ -9,7 +9,6 @@
             "HEROKU_KEY": "\n🔢 Heroku API Keyinizi yazın: ",
             "HEROKU_KEY_LOGIN": "⏳ Heroku-ya giriş edirəm...",
             "LOGGED": "✅ Heroku-ya giriş elədim!\n",
-            "GETTING_STRING_SESSION": "⏳ StringSession alacam...\n",
             "SUCCESS_STRING": "✅ StringSession aldım!\n",
             "CREATING_APP": "⏳ Tətbiqinizi Heroku-da yaradıram...",
             "SUCCESS_APP": "✅ Tətbiqinizi Heroku-da yaratdım!\n",

@@ -9,7 +9,6 @@
             "HEROKU_KEY": "(?) Heroku API kalitingizni kiriting:",
             "HEROKU_KEY_LOGIN": "(i) Heroku-ga kirish...",
             "LOGGED": "(✓) Kirish muvaffaqiyatli bo'ldi!",
-            "GETTING_STRING_SESSION": "(i) StringSession olinmoqda...",
             "SUCCESS_STRING": "(✓) StringSession qabul qilindi!",
             "CREATING_APP": "(i) Dastur yaratilmoqda...",
             "SUCCESS_APP": "(✓) Ilova yaratish muvaffaqiyatli bo'ldi!",
