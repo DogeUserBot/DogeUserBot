@@ -14,7 +14,7 @@
             "SUCCESS_APP": "✅ Oluşturdum!",
             "DOWNLOADING": "⏳ Heroku'ya yükleniyorum...",
             "DOWNLOADED": "✅ Yüklendim!",
-            "DEPLOYING": "\n⏳ Deploy işlemini yapıyorum...\n\n⏳ Lütfen bekleyin...\n\n🔰 (Bu, maksimum 5 dakika sürecektir ve ayrıca internet bağlantınıza bağlı olarak bu süre değişebilir.)\n",
+            "DEPLOYING": "⏳ Deploy işlemini yapıyorum...\n\n⏳ Lütfen bekleyin...\n\n🔰 Bu, maksimum 5 dakika sürecektir. \n\n🔰 Ayrıca internet bağlantınıza bağlı olarak bu süre değişebilir.",
             "WRITING_CONFIG": "⏳ Verileri Heroku ile senkronize ediyorum...",
             "SET_LANG": "💬 Artık {} dilindeyim!",
             "SUCCESS_CONFIG": "✅ Senkronize ettim!",

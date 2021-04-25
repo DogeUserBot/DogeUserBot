@@ -169,7 +169,7 @@ if __name__ == "__main__":
     basarili(LANG['OPENED_DYNO'])
     basarili(LANG['SUCCESS_DEPLOY'])
 
-    console.print(Panel(f"\n[bold green]{LANG['END'].format(round(time() - baslangic))}[/]\n", title="🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 🐾", border_style="bold green", justify="center"))
+    console.print(Panel(f"\n[bold green]{LANG['END'].format(round(time() - baslangic))}[/]\n", title="🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 🐾", border_style="bold green"), justify="center")
 
     BotLog = False
 
