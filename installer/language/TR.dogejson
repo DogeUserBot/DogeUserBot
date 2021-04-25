@@ -52,7 +52,7 @@
             "NO": "Hayır"
         },
         
-        "ASTRING": {
+        "GETSTRING": {
             "CONNECTING": "⏳ Telegram'ın sunucularına bağlanıyorum...",
             "RETRYING": "🔴 Bağlanırken bir hata oluştu. \n\n🔰 Yeniden deniyorum...",
             "PHONE_NUMBER": "⏩ Örnek: +905123456789\n\n📲 Telefon numaranızı örnekteki gibi yazın: ",

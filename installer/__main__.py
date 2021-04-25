@@ -13,7 +13,7 @@ import random
 import requests
 from git import Repo
 from installer import *
-from .astring import main
+from .getstring import main
 import os
 import base64
 from telethon import TelegramClient, functions

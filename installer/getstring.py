@@ -27,7 +27,7 @@ import bs4
 
 os.system("clear")
 loop = asyncio.get_event_loop()
-LANG  = LANG['ASTRING']
+LANG  = LANG['GETSTRING']
 
 class InteractiveTelegramClient(TelegramClient):
     # Original Source https://github.com/LonamiWebs/Telethon/master/telethon_examples/interactive_telegram_client.py #

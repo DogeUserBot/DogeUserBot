@@ -49,7 +49,7 @@
             "YES": "Yes",
             "NO": "No"
         },
-        "ASTRING": {
+        "GETSTRING": {
             "CONNECTING": "(i) Connecting to Telegram Servers...",
             "RETRYING": "(!) An error occurred while connecting. Retrying...",
             "PHONE_NUMBER": "(?) Your Phone Number (Example: +1xxxxxxxxxx): ",

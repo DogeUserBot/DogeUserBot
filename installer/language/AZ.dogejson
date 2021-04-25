@@ -50,7 +50,7 @@
             "NO": "Yox"
         },
         
-        "ASTRING": {
+        "GETSTRING": {
             "CONNECTING": "⏳ Telegram-ın serverlərinə qoşuluram...",
             "RETRYING": "🔸 Bağlanarkən xəta baş verdi. \n 🔹 Yenidən çalışıram. \n",
             "PHONE_NUMBER": "\n📲 Telefon nömrənizi yazın  \n👉 Nümunə : +994123456789: ",

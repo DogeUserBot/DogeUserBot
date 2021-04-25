@@ -49,7 +49,7 @@
             "YES": "Ha",
             "NO": "Yoq"
         },
-        "ASTRING": {
+        "GETSTRING": {
             "CONNECTING": "(i) Telegram serverlariga ulanish...",
             "RETRYING": "(!) Ulanish paytida xatolik yuz berdi. Qayta urinilmoqda...",
             "PHONE_NUMBER": "(?) Sizning telefon raqamingiz (Masalan: + 998xxxxxxxxx): ",
