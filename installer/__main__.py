@@ -177,7 +177,7 @@ if __name__ == "__main__":
     config['BOTLOG'] = "True"
     config['BOTLOG_CHATID'] = KanalId
 
-    basarili(f"✅ {LANG['AFTERDEPLOY']}\n\n[bold white]🌟 {LANG['SETTINGS']}")
+    basarili(f"✅ {LANG['AFTERDEPLOY']}\n\n[bold yellow]{LANG['LOGOSETTINGS']}[/]\n\n[bold white]🌟 {LANG['SETTINGS']}")
 
     BotLog = True
 
