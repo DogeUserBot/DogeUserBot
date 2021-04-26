@@ -179,7 +179,7 @@ if __name__ == "__main__":
 
     basarili(f"✅ {LANG['AFTERDEPLOY']}")
 
-    soru(Panel(f"[bold yellow]{LANG['LOGOSETTINGS']}[/]\n\n[bold white]🌟 {LANG['SETTINGS']}", expand=True), justify="center")
+    console.print(Panel(f"\n[bold yellow]{LANG['LOGOSETTINGS']}[/]\n\n[bold white]🌟 {LANG['SETTINGS']}", expand=True), justify="center")
 
     BotLog = True
 
