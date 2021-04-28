@@ -151,7 +151,7 @@ async def amogus(event):
     arr = random.randint(1, 12)
     fontsize = 110
     FONT_FILE = await get_font_file(event.client, "@DogeFonts")
-    url = './userbot/resources/amongus_sticker/'
+    url = 'https://raw.githubusercontent.com/DOGEUSERBOT/DogeUserBot/tree/master/userbot/resources/amongus_sticker/'
     font = ImageFont.truetype(FONT_FILE, size=fontsize)
 
     imposter = Image.open(BytesIO(get(f'{url}{arr}.png').content))
@@ -192,7 +192,7 @@ async def amogus(event):
     arr = random.randint(1, 15)
     fontsize = 110
     FONT_FILE = await get_font_file(event.client, "@DogeFonts")
-    url = './userbot/resources/doge_sticker/'
+    url = 'https://raw.githubusercontent.com/DOGEUSERBOT/DogeUserBot/tree/master/userbot/resources/doge_sticker/'
     font = ImageFont.truetype(FONT_FILE, size=fontsize)
 
     doge = Image.open(BytesIO(get(f'{url}{arr}.png').content))
@@ -300,5 +300,5 @@ CmdHelp('stickfun').add_command(
 ).add_command(
     'dsc', '<metin>', 'Metninizi Doge çıkartmalarına dönüştürür.', 'dsc Ben de iyiyim.'
 ).add_command(
-    'rbg', '<metin>', 'Metninizi rastgele bir renkte çıkartmaya dönüştürür.', 'rgb Hep iyi ol!'
+    'rgb', '<metin>', 'Metninizi rastgele bir renkte çıkartmaya dönüştürür.', 'rgb Hep iyi ol!'
 ).add()
