@@ -10,6 +10,9 @@
 """ Telegram'daki profil detaylarınızı değişmeye yarayan UserBot modülüdür. """
 
 import os
+import logging
+import time
+
 from telethon.errors import ImageProcessFailedError, PhotoCropSizeSmallError
 from telethon.errors.rpcerrorlist import (PhotoExtInvalidError,
                                           UsernameOccupiedError)
@@ -20,6 +23,9 @@ from telethon.tl.functions.photos import (DeletePhotosRequest,
                                           GetUserPhotosRequest,
                                           UploadProfilePhotoRequest)
 from telethon.tl.types import InputPhoto, MessageMediaPhoto, User, Chat, Channel
+from telethon.events import NewMessage
+from telethon.tl.custom import Dialog
+
 from userbot import bot, CMD_HELP
 from userbot.events import register
 from userbot.cmdhelp import CmdHelp
@@ -42,6 +48,29 @@ BIO_SUCCESS = LANG['BIO_SUCCESS']
 NAME_OK = LANG['NAME_OK']
 USERNAME_SUCCESS = LANG['USERNAME_SUCCESS']
 USERNAME_TAKEN = LANG['USERNAME_TAKEN']
+
+logging.basicConfig(format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
+                    level=logging.WARNING)
+logger = logging.getLogger(__name__)
+
+def make_mention(user):
+    if user.username:
+        return f"@{user.username}"
+    else:
+        return inline_mention(user)
+
+
+def inline_mention(user):
+    full_name = user_full_name(user) or "No Name"
+    return f"[{full_name}](tg://user?id={user.id})"
+
+
+def user_full_name(user):
+    names = [user.first_name, user.last_name]
+    names = [i for i in list(names) if i]
+    full_name = ' '.join(names)
+    return full_name
+
 # ===============================================================
 
 
@@ -119,41 +148,82 @@ async def update_username(username):
         await username.edit(USERNAME_TAKEN)
 
 
-@register(outgoing=True, pattern="^.count$")
-async def count(event):
-    """ .count komutu profil istatistiklerini gösterir. """
-    u = 0
-    g = 0
-    c = 0
-    bc = 0
-    b = 0
-    result = ""
-    await event.edit("`Lütfen bekleyin..`")
-    dialogs = await bot.get_dialogs(limit=None, ignore_migrated=True)
-    for d in dialogs:
-        currrent_entity = d.entity
-        if isinstance(currrent_entity, User):
-            if currrent_entity.bot:
-                b += 1
-            else:
-                u += 1
-        elif isinstance(currrent_entity, Chat):
-            g += 1
-        elif isinstance(currrent_entity, Channel):
-            if currrent_entity.broadcast:
-                bc += 1
-            else:
-                c += 1
-        else:
-            print(d)
+@register(outgoing=True, pattern=r"^.count(?: |$)(.*)")
+@register(outgoing=True, pattern=r"^.bilgi(?: |$)(.*)")
+async def count(event: NewMessage.Event) -> None:  # pylint: disable = R0912, R0914, R0915
+    """Istatistikler için bir komut"""
+    waiting_message = await event.edit('**🐶 Hesabınızın bilgilerini analiz ediyorum...**')
+    start_time = time.time()
+    private_chats = 0
+    bots = 0
+    groups = 0
+    broadcast_channels = 0
+    admin_in_groups = 0
+    creator_in_groups = 0
+    admin_in_broadcast_channels = 0
+    creator_in_channels = 0
+    unread_mentions = 0
+    unread = 0
+    largest_group_member_count = 0
+    largest_group_with_admin = 0
+    dialog: Dialog
+    async for dialog in event.client.iter_dialogs():
+        entity = dialog.entity
 
-    result += f"`{LANG['USERS']}:`\t**{u}**\n"
-    result += f"`{LANG['GROUPS']}:`\t**{g}**\n"
-    result += f"`{LANG['SUPERGROUPS']}:`\t**{c}**\n"
-    result += f"`{LANG['CHANNELS']}:`\t**{bc}**\n"
-    result += f"`{LANG['BOTS']}:`\t**{b}**"
+        if isinstance(entity, Channel):
+            # participants_count = (await event.get_participants(dialog, limit=0)).total
+            if entity.broadcast:
+                broadcast_channels += 1
+                if entity.creator or entity.admin_rights:
+                    admin_in_broadcast_channels += 1
+                if entity.creator:
+                    creator_in_channels += 1
 
-    await event.edit(result)
+            elif entity.megagroup:
+                groups += 1
+                # if participants_count > largest_group_member_count:
+                #     largest_group_member_count = participants_count
+                if entity.creator or entity.admin_rights:
+                    # if participants_count > largest_group_with_admin:
+                    #     largest_group_with_admin = participants_count
+                    admin_in_groups += 1
+                if entity.creator:
+                    creator_in_groups += 1
+
+        elif isinstance(entity, User):
+            private_chats += 1
+            if entity.bot:
+                bots += 1
+
+        elif isinstance(entity, Chat):
+            groups += 1
+            if entity.creator or entity.admin_rights:
+                admin_in_groups += 1
+            if entity.creator:
+                creator_in_groups += 1
+
+        unread_mentions += dialog.unread_mentions_count
+        unread += dialog.unread_count
+    stop_time = time.time() - start_time
+
+    full_name = inline_mention(await event.client.get_me())
+    response = f'**🐶 {full_name} HESAP İSTATİSTİKLERİNİZ**\n\n'
+    response += f'**👤 Mesajlaştığınız hesapların sayısı: **`{private_chats}`\n'
+    response += f'**ㅤㅤ📊 Kişiler: ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ  **`{private_chats - bots}`\n'
+    response += f'**ㅤㅤ📊 Botlar: ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ **`{bots}`\n\n'
+    response += f'**👥 Katıldığınız gruplar: ㅤㅤㅤㅤㅤ     **`{groups}`\n\n'
+    response += f'**📣 Katıldığınız kanallar: ㅤㅤㅤㅤㅤ   **`{broadcast_channels}`\n\n'
+    response += f'**👮 Yönetici olduğunuz gruplar: ㅤㅤ  **`{admin_in_groups}`\n'
+    response += f'**ㅤㅤ📊 Oluşturduğunuz gruplar:ㅤㅤ**`{creator_in_groups}`\n'
+    response += f'**ㅤㅤ📊 Yönetici olduğunuz gruplar:   **`{admin_in_groups - creator_in_groups}`\n\n'
+    response += f'**👮 Yönetici olduğunuz kanallar: ㅤㅤ**`{admin_in_broadcast_channels}`\n'
+    response += f'**ㅤㅤ📊 Kurucu olduğunuz kanallar:   **`{creator_in_channels}`\n'
+    response += f'**ㅤㅤ📊 Yönetici olduğunuz kanallar: **`{admin_in_broadcast_channels - creator_in_channels}`\n\n'
+    response += f'**✉️ Okunmamış mesajlarınız: ㅤㅤㅤ  **`{unread}`\n\n'
+    response += f'**📧 Okunmamış etiketli mesajlarınız: **`{unread_mentions}`\n\n'
+    response += f'**⏱ {stop_time:.02f}** saniyede istatistiklerinizi hesapladım.\n'
+
+    await event.edit(response)
 
 
 @register(outgoing=True, pattern=r"^.delpfp")
@@ -181,6 +251,7 @@ async def remove_profilepic(delpfp):
     await delpfp.client(DeletePhotosRequest(id=input_photos))
     await delpfp.edit(
         LANG['DELPFP'] % len(input_photos))
+
 
 CmdHelp('profile').add_command(
     'username', '<yeni kullanıcı adı>', 'Telegram\'daki kullanıcı adınızı değişir.'
