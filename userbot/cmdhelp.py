@@ -61,7 +61,7 @@ class CmdHelp:
         Sonuç getirir.
         """
 
-        result = f"**🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 🐾\n\n🧩 Pʟᴜɢɪɴ:**       `{self.FILE}`\n"
+        result = f"**🐶 𝘿𝙊𝙂𝙀\n🐾 𝙐𝙎𝙀𝙍𝘽𝙊𝙏\n\n🧩 Pʟᴜɢɪɴ:**       `{self.FILE}`\n"
         if self.WARNING == '' and self.INFO == '':
             result += f"**🛡 Oꜰꜰɪᴄɪᴀʟ:**     {'✅' if self.IS_OFFICIAL else '❌'}\n\n"
         else:
