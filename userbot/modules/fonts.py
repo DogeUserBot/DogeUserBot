@@ -639,7 +639,7 @@ async def fontz(event):
 
 
 
-CmdHelp('fontlar').add_command(
+CmdHelp('fonts').add_command(
     'f1', '<metin>', '千ㄖ几ㄒ'
 ).add_command(
     'f2', '<metin>', '🅕🅞🅝🅣'

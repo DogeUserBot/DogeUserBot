@@ -393,7 +393,7 @@ with bot:
         
         @tgbot.on(callbackquery.CallbackQuery(data=compile(b"close")))
         async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == bot.uid or event.query.user_id == id:
+            if event.query.user_id == uid:
                 await event.delete()
 
         @tgbot.on(callbackquery.CallbackQuery(data=compile(b"bilgi\[(\d*)\]\((.*)\)")))
@@ -425,30 +425,30 @@ with bot:
             sayfa = int(event.data_match.group(2).decode("UTF-8"))
             komut = event.data_match.group(3).decode("UTF-8")
 
-            result = f"**📗 DOSYA:** `{cmd}`\n"
+            result = f"**🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 🐾\n\n🧩 Pʟᴜɢɪɴ:**       `{cmd}`\n"
             if CMD_HELP_BOT[cmd]['info']['info'] == '':
                 if not CMD_HELP_BOT[cmd]['info']['warning'] == '':
-                    result += f"**🐾 OFFICIAL:** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
-                    result += f"**⚠️ UYARI:** {CMD_HELP_BOT[cmd]['info']['warning']}\n\n"
+                    result += f"**🛡 Oꜰꜰɪᴄɪᴀʟ:**     {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
+                    result += f"**⚠️ Dɪᴋᴋᴀᴛ:**       {CMD_HELP_BOT[cmd]['info']['warning']}\n\n"
                 else:
-                    result += f"**🐾 OFFICIAL:** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n\n"
+                    result += f"**🛡 Oꜰꜰɪᴄɪᴀʟ:**     {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n\n"
             else:
-                result += f"**🐾 OFFICIAL:** {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
+                result += f"**🛡 Oꜰꜰɪᴄɪᴀʟ:**     {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"
                 if not CMD_HELP_BOT[cmd]['info']['warning'] == '':
-                    result += f"**⚠️ UYARI:** {CMD_HELP_BOT[cmd]['info']['warning']}\n"
-                result += f"**ℹ️ BİLGİ:** {CMD_HELP_BOT[cmd]['info']['info']}\n\n"
+                    result += f"**⚠️ Dɪᴋᴋᴀᴛ:**       {CMD_HELP_BOT[cmd]['info']['warning']}\n"
+                result += f"**ℹ️ Bɪʟɢɪ:**           {CMD_HELP_BOT[cmd]['info']['info']}\n\n"
 
             command = CMD_HELP_BOT[cmd]['commands'][komut]
             if command['params'] is None:
-                result += f"**🛠 KOMUT:** `{PATTERNS[:1]}{command['command']}`\n"
+                result += f"**🔰 Kᴏᴍᴜᴛ:**        `{PATTERNS[:1]}{command['command']}`\n"
             else:
-                result += f"**🛠 KOMUT:** `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
+                result += f"**🔰 Kᴏᴍᴜᴛ:**        `{PATTERNS[:1]}{command['command']} {command['params']}`\n"
                 
             if command['example'] is None:
-                result += f"**💬 AÇIKLAMA:** `{command['usage']}`\n\n"
+                result += f"**💬 Aᴄɪᴋʟᴀᴍᴀ:**  `{command['usage']}`\n\n"
             else:
-                result += f"**💬 AÇIKLAMA:** `{command['usage']}`\n"
-                result += f"**📍 ÖRNEK:** `{PATTERNS[:1]}{command['example']}`\n\n"
+                result += f"**💬 Aᴄɪᴋʟᴀᴍᴀ:**  `{command['usage']}`\n"
+                result += f"**💡 Öʀɴᴇᴋ:**        `{PATTERNS[:1]}{command['example']}`\n\n"
 
             await event.edit(
                 result,

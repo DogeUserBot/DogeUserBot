@@ -35,12 +35,12 @@ async def register(event):
         sayfa = [sorted(list(CMD_HELP))[i:i + 3] for i in range(0, len(sorted(list(CMD_HELP))), 3)]
         
         for i in sayfa:
-            string += f'📍  '
+            string += f'🐾  '
             for sira, a in enumerate(i):
                 string += "`" + str(a)
                 if sira == i.index(i[-1]):
                     string += "`"
                 else:
-                    string += "` **┃•┃** "
+                    string += "` ** • ** "
             string += "\n"
         await event.edit(LANG["NEED_MODULE"] + '\n\n' + string)

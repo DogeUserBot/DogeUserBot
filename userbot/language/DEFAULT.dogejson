@@ -35,12 +35,12 @@
         },
         
         "__doge": {
-            "NEED_PLUGIN": "Lütfen sahip olduğum bir plugin adı söyler misin?",
-            "NEED_MODULE": "Hiç sormayacaksın sanmıştım.. Lütfen istediğin plugin adını söyler misin? !!\nKullanım: .doge <modül adı>"
+            "NEED_PLUGIN": "Bu plugini bulamadım, sanırım böyle bir plugin kurmadınız.",
+            "NEED_MODULE": "[🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏](https://Telegram.dog/DogeUserBot)\n\nHerhangi bir komutu öğrenmek için;\n.doge <plugin adı>\nyazın."
         },
 
         "__helpme": {
-            "NO_BOT": "`Bot çalışmıyor! Lütfen Bot Tokeni ve Kullanıcı adını doğru ayarlar mısın? Modülü durdurdum.`"
+            "NO_BOT": "InlineBot ayarlamamışsınız!\nBunu ayarlamak için @DogeSup grubuma `#inlinebot` yazın ve adımları takip edin."
         },
 
         "admin": {
