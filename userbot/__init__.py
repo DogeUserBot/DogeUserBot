@@ -237,9 +237,9 @@ if not os.path.exists('bin'):
     os.mkdir('bin')
 
 binaries = {
-    "https://raw.githubusercontent.com/yshalsager/megadown/master/megadown":
+    "https://raw.githubusercontent.com/MUTLCC/Doge/doge/megadown":
     "bin/megadown",
-    "https://raw.githubusercontent.com/yshalsager/cmrudl.py/master/cmrudl.py":
+    "https://raw.githubusercontent.com/MUTLCC/Doge/doge/cmrudl.py":
     "bin/cmrudl"
 }
 
@@ -351,7 +351,7 @@ with bot:
                 veriler = (butonlastir(0, sorted(CMD_HELP)))
                 result = await builder.article(
                     f"Lütfen .yardım ya da .help komutu ile kullanın.",
-                    text=f"**ㅤ\n[🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏](https://Telegram.dog/DogeUserBot)\n\nHerhangi bir komutu öğrenmek için bir butona dokun.\n\nKurulu modüller:** `{len(CMD_HELP)}`\n**Sayfa:** `1 - {veriler[0]}`",
+                    text=f"**ㅤ\n[🐶 𝘿𝙊𝙂𝙀\n🐾 𝙐𝙎𝙀𝙍𝘽𝙊𝙏](https://Telegram.dog/DogeUserBot)\n\nHerhangi bir komutu öğrenmek için bir butona dokun.\n\nKurulu modüller:** `{len(CMD_HELP)}`\n**Sayfa:** `1 - {veriler[0]}`",
                     buttons=veriler[1],
                     link_preview=False
                 )
@@ -368,7 +368,7 @@ with bot:
             else:
                 result = builder.article(
                     "@DogeUserBot",
-                    text="""Telegram'da bir köpeğiniz olsun!\nTelegram hesabınıza @DogeUserBot kurup yararlı araçları ve bu eğlenceli komutları Doge sayesinde kullanabilirsiniz.\nUnutmayın, başkasının köpeğine sahip olamazsınız!\nGitHub Repo'm! ya da Grubuma Katıl! butonuna dokunup tüm kurulum detaylarını öğrenebilirsiniz!""",
+                    text="""[🐶 𝘿𝙊𝙂𝙀\n🐾 𝙐𝙎𝙀𝙍𝘽𝙊𝙏](https://Telegram.dog/DogeUserBot)\n\nTelegram'da bir köpeğiniz olsun!\nTelegram hesabınıza @DogeUserBot kurup yararlı araçları ve bu eğlenceli komutları Doge sayesinde kullanabilirsiniz.\nUnutmayın, başkasının köpeğine sahip olamazsınız!\nGitHub Repo'm! ya da Grubuma Katıl! butonuna dokunup tüm kurulum detaylarını öğrenebilirsiniz!""",
                     buttons=[
                         [custom.Button.url("Kanalıma Katıl!", "https://t.me/DogeUserBot"), custom.Button.url(
                             "Grubuma Katıl!", "https://t.me/DogeSup")],
@@ -386,7 +386,7 @@ with bot:
             sayfa = int(event.data_match.group(1).decode("UTF-8"))
             veriler = butonlastir(sayfa, CMD_HELP)
             await event.edit(
-                f"**ㅤ\n[🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏](https://Telegram.dog/DogeUserBot)\n\nHerhangi bir komutu öğrenmek için bir butona dokun.\n\nKurulu modüller:** `{len(CMD_HELP)}`\n**Sayfa:** `{sayfa + 1} - {veriler[0]}`",
+                f"**ㅤ\n[🐶 𝘿𝙊𝙂𝙀\n🐾 𝙐𝙎𝙀𝙍𝘽𝙊𝙏](https://Telegram.dog/DogeUserBot)\n\nHerhangi bir komutu öğrenmek için bir butona dokun.\n\nKurulu Pluginler:** `{len(CMD_HELP)}`\n**Sayfa:** `{sayfa + 1} - {veriler[0]}`",
                 buttons=veriler[1],
                 link_preview=False
             )
@@ -411,7 +411,7 @@ with bot:
             butonlar = [butonlar[i:i + 2] for i in range(0, len(butonlar), 2)]
             butonlar.append([custom.Button.inline("◀️ GERI", data=f"sayfa({sayfa})")])
             await event.edit(
-                f"**ㅤ\n[🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏](https://Telegram.dog/DogeUserBot)\n\nHerhangi bir komutu öğrenmek için bir butona dokun.\n\n📗 DOSYA:** `{komut}`\n**🔢 KOMUTLAR:** `{len(CMD_HELP_BOT[komut]['commands'])}`",
+                f"**ㅤ\n[🐶 𝘿𝙊𝙂𝙀\n🐾 𝙐𝙎𝙀𝙍𝘽𝙊𝙏](https://Telegram.dog/DogeUserBot)\n\nHerhangi bir komutu öğrenmek için bir butona dokun.\n\n🧩 Pʟᴜɢɪɴ:**       `{komut}`\n**🔰 Kᴏᴍᴜᴛ:**        `{len(CMD_HELP_BOT[komut]['commands'])}`",
                 buttons=butonlar,
                 link_preview=False
             )
@@ -425,7 +425,7 @@ with bot:
             sayfa = int(event.data_match.group(2).decode("UTF-8"))
             komut = event.data_match.group(3).decode("UTF-8")
 
-            result = f"**🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏 🐾\n\n🧩 Pʟᴜɢɪɴ:**       `{cmd}`\n"
+            result = f"**ㅤ\n[🐶 𝘿𝙊𝙂𝙀\n🐾 𝙐𝙎𝙀𝙍𝘽𝙊𝙏](https://Telegram.dog/DogeUserBot)\n\n🧩 Pʟᴜɢɪɴ:**       `{cmd}`\n"
             if CMD_HELP_BOT[cmd]['info']['info'] == '':
                 if not CMD_HELP_BOT[cmd]['info']['warning'] == '':
                     result += f"**🛡 Oꜰꜰɪᴄɪᴀʟ:**     {'✅' if CMD_HELP_BOT[cmd]['info']['official'] else '❌'}\n"

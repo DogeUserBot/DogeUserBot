@@ -36,7 +36,7 @@
         
         "__doge": {
             "NEED_PLUGIN": "Bu plugini bulamadım, sanırım böyle bir plugin kurmadınız.",
-            "NEED_MODULE": "[🐶 𝘿𝙊𝙂𝙀 𝙐𝙎𝙀𝙍𝘽𝙊𝙏](https://Telegram.dog/DogeUserBot)\n\nHerhangi bir komutu öğrenmek için;\n.doge <plugin adı>\nyazın."
+            "NEED_MODULE": "🐶 𝘿𝙊𝙂𝙀\n🐾 𝙐𝙎𝙀𝙍𝘽𝙊𝙏\n\n▶️ Herhangi bir komutu öğrenmek için;\n⏺ `.doge <plugin adı>` yazın.\n"
         },
 
         "__helpme": {

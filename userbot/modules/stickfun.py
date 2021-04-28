@@ -175,6 +175,8 @@ async def amogus(event):
     image.save(output, 'WebP')
     output.seek(0)
 
+    await event.delete()
+
     await event.client.send_file(event.chat_id, output, reply_to=event.message.reply_to_msg_id)
     try:
         remove(FONT_FILE)
@@ -215,6 +217,8 @@ async def doge(event):
     output.name = 'hav.webp'
     image.save(output, 'WebP')
     output.seek(0)
+
+    await event.delete()
 
     await event.client.send_file(event.chat_id, output, reply_to=event.message.reply_to_msg_id)
     try:
