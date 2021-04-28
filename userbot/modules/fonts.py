@@ -404,7 +404,7 @@ f13font = [
 ]
 
 
-@register(outgoing=True, pattern="^.font1(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Ff]1(?: |$)(.*)")
 async def fonta(event):
 
     args = event.pattern_match.group(1)
@@ -414,7 +414,7 @@ async def fonta(event):
     if not args:
         await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
         return
-    string = "  ".join(args).lower()
+    string = "".join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             f1character = f1font[normiefont.index(normiecharacter)]
@@ -422,7 +422,7 @@ async def fonta(event):
     await event.edit(string)
 
 
-@register(outgoing=True, pattern="^.font2(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Ff]2(?: |$)(.*)")
 async def fontb(event):
 
     args = event.pattern_match.group(1)
@@ -432,7 +432,7 @@ async def fontb(event):
     if not args:
         await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
         return
-    string = "  ".join(args).lower()
+    string = "".join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             f2character = f2font[normiefont.index(normiecharacter)]
@@ -440,7 +440,7 @@ async def fontb(event):
     await event.edit(string)
 
 
-@register(outgoing=True, pattern="^.font3(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Ff]3(?: |$)(.*)")
 async def fontc(event):
 
     args = event.pattern_match.group(1)
@@ -450,7 +450,7 @@ async def fontc(event):
     if not args:
         await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
         return
-    string = "  ".join(args).lower()
+    string = "".join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             f3character = f3font[normiefont.index(normiecharacter)]
@@ -458,7 +458,7 @@ async def fontc(event):
     await event.edit(string)
     
     
-@register(outgoing=True, pattern="^.font4(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Ff]4(?: |$)(.*)")
 async def fontd(event):
 
     args = event.pattern_match.group(1)
@@ -468,7 +468,7 @@ async def fontd(event):
     if not args:
         await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
         return
-    string = "  ".join(args).lower()
+    string = "".join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             f4character = f4font[normiefont.index(normiecharacter)]
@@ -476,7 +476,7 @@ async def fontd(event):
     await event.edit(string)
     
     
-@register(outgoing=True, pattern="^.font5(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Ff]5(?: |$)(.*)")
 async def fonte(event):
 
     args = event.pattern_match.group(1)
@@ -486,7 +486,7 @@ async def fonte(event):
     if not args:
         await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
         return
-    string = "  ".join(args).lower()
+    string = "".join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             f5character = f5font[normiefont.index(normiecharacter)]
@@ -494,7 +494,7 @@ async def fonte(event):
     await event.edit(string)
 
 
-@register(outgoing=True, pattern="^.font6(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Ff]6(?: |$)(.*)")
 async def fontf(event):
 
     args = event.pattern_match.group(1)
@@ -504,7 +504,7 @@ async def fontf(event):
     if not args:
         await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
         return
-    string = "  ".join(args).lower()
+    string = "".join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             f6character = f6font[normiefont.index(normiecharacter)]
@@ -512,7 +512,7 @@ async def fontf(event):
     await event.edit(string)
 
 
-@register(outgoing=True, pattern="^.font7(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Ff]7(?: |$)(.*)")
 async def fontg(event):
 
     args = event.pattern_match.group(1)
@@ -522,14 +522,14 @@ async def fontg(event):
     if not args:
         await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
         return
-    string = "  ".join(args).lower()
+    string = "".join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             f7character = f7font[normiefont.index(normiecharacter)]
             string = string.replace(normiecharacter, f7character)
     await event.edit(string)
 
-@register(outgoing=True, pattern="^.font8(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Ff]8(?: |$)(.*)")
 async def fonth(event):
 
     args = event.pattern_match.group(1)
@@ -539,7 +539,7 @@ async def fonth(event):
     if not args:
         await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
         return
-    string = "  ".join(args).lower()
+    string = "".join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             f8character = f8font[normiefont.index(normiecharacter)]
@@ -547,7 +547,7 @@ async def fonth(event):
     await event.edit(string)
 
 
-@register(outgoing=True, pattern="^.font9(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Ff]9(?: |$)(.*)")
 async def fonti(event):
 
     args = event.pattern_match.group(1)
@@ -557,7 +557,7 @@ async def fonti(event):
     if not args:
         await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
         return
-    string = "  ".join(args).lower()
+    string = "".join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             f9character = f9font[normiefont.index(normiecharacter)]
@@ -565,7 +565,7 @@ async def fonti(event):
     await event.edit(string)
 
 
-@register(outgoing=True, pattern="^.font10(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Ff]10(?: |$)(.*)")
 async def fontj(event):
 
     args = event.pattern_match.group(1)
@@ -575,7 +575,7 @@ async def fontj(event):
     if not args:
         await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
         return
-    string = "  ".join(args).lower()
+    string = "".join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             f10character = f10font[normiefont.index(normiecharacter)]
@@ -583,7 +583,7 @@ async def fontj(event):
     await event.edit(string)
 
 
-@register(outgoing=True, pattern="^.font11(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Ff]11(?: |$)(.*)")
 async def fontl(event):
 
     args = event.pattern_match.group(1)
@@ -593,7 +593,7 @@ async def fontl(event):
     if not args:
         await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
         return
-    string = "  ".join(args).lower()
+    string = "".join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             f11character = f11font[normiefont.index(normiecharacter)]
@@ -601,7 +601,7 @@ async def fontl(event):
     await event.edit(string)
 
 
-@register(outgoing=True, pattern="^.font12(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Ff]12(?: |$)(.*)")
 async def fontq(event):
 
     args = event.pattern_match.group(1)
@@ -611,7 +611,7 @@ async def fontq(event):
     if not args:
         await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
         return
-    string = "  ".join(args).lower()
+    string = "".join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             f12character = f12font[normiefont.index(normiecharacter)]
@@ -620,7 +620,7 @@ async def fontq(event):
 
 
 
-@register(outgoing=True, pattern="^.font13(?: |$)(.*)")
+@register(outgoing=True, pattern="^.[Ff]13(?: |$)(.*)")
 async def fontz(event):
 
     args = event.pattern_match.group(1)
@@ -630,7 +630,7 @@ async def fontz(event):
     if not args:
         await event.edit("`Hey, metni çeviremiyorum. Bir mesaja yanıt olarak kullanın`")
         return
-    string = "  ".join(args).lower()
+    string = "".join(args).lower()
     for normiecharacter in string:
         if normiecharacter in normiefont:
             f13character = f13font[normiefont.index(normiecharacter)]
@@ -640,29 +640,29 @@ async def fontz(event):
 
 
 CmdHelp('fontlar').add_command(
-    '千ㄖ几ㄒ 1', None, ' .font1 yazı'
+    'f1', '<metin>', '千ㄖ几ㄒ'
 ).add_command(
-    '🅕🅞🅝🅣 2', None, ' .font2 yazı'
+    'f2', '<metin>', '🅕🅞🅝🅣'
 ).add_command(
-    '𝔉𝔒𝔑𝔗 3', None, ' .font3 yazı'
+    'f3', '<metin>', '𝔉𝔒𝔑𝔗'
 ).add_command(
-    'ϝⲟⲛⲧ 4', None, ' .font4 yazı'
+    'f4', '<metin>', 'ϝⲟⲛⲧ'
 ).add_command(
-    '🄵🄾🄽🅃 5', None, ' .font5 yazı'
+    'f5', '<metin>', '🄵🄾🄽🅃'
 ).add_command(
-    'font6', None, ' .font6 yazı'
+    'f6', '<metin>', 'ᶠᵒᶰᵗ'
 ).add_command(
-    'ғᴏɴᴛ 7', None, ' .font7 yazı'
+    'f7', '<metin>', 'ғᴏɴᴛ'
 ).add_command(
-    '𝐅𝐎𝐍𝐓 8', None, ' .font8 yazı'
+    'f8', '<metin>', '𝐅𝐎𝐍𝐓'
 ).add_command(
-    '𝓕𝓞𝓝𝓣 9', None, ' .font9 yazı'
+    'f9', '<metin>', '𝓕𝓞𝓝𝓣'
 ).add_command(
-    '𝙁𝙊𝙉𝙏 10', None, ' .font10 yazı'
+    'f10', '<metin>', '𝙁𝙊𝙉𝙏'
 ).add_command(
-    '𝙵𝙾𝙽𝚃 11', None, ' .font11 yazı'
+    'f11', '<metin>', '𝙵𝙾𝙽𝚃'
 ).add_command(
-    'ꊰꄲꋊ꓄ 12', None, ' .font12 yazı'
+    'f12', '<metin>', 'ꊰꄲꋊ꓄'
 ).add_command(
-    '𝔽𝕆ℕ𝕋 13', None, ' .font13 yazı'
+    'f13', '<metin>', '𝔽𝕆ℕ𝕋'
 ).add()
