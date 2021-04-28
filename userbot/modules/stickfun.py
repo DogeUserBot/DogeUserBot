@@ -151,7 +151,7 @@ async def amogus(event):
     arr = random.randint(1, 12)
     fontsize = 110
     FONT_FILE = await get_font_file(event.client, "@DogeFonts")
-    url = 'https://raw.githubusercontent.com/MUTLCC/Doge/tree/doge/Resources/StickFun/AmongUs/'
+    url = 'https://raw.githubusercontent.com/MUTLCC/Doge/doge/Resources/StickFun/AmongUs/'
     font = ImageFont.truetype(FONT_FILE, size=fontsize)
 
     imposter = Image.open(BytesIO(get(f'{url}{arr}.png').content))
@@ -182,7 +182,7 @@ async def amogus(event):
         pass
 
 @register(outgoing=True, pattern="^.[dD][sS][cC](?: |$)(.*)")
-async def amogus(event):
+async def doge(event):
     sticktext = event.pattern_match.group(1).strip()
 
     if len(sticktext) < 1:
@@ -192,7 +192,7 @@ async def amogus(event):
     arr = random.randint(1, 15)
     fontsize = 110
     FONT_FILE = await get_font_file(event.client, "@DogeFonts")
-    url = 'https://raw.githubusercontent.com/MUTLCC/Doge/tree/doge/Resources/StickFun/Doge/'
+    url = 'https://raw.githubusercontent.com/MUTLCC/Doge/doge/Resources/StickFun/Doge/'
     font = ImageFont.truetype(FONT_FILE, size=fontsize)
 
     doge = Image.open(BytesIO(get(f'{url}{arr}.png').content))
@@ -224,7 +224,7 @@ async def amogus(event):
 
 
 @register(outgoing=True, pattern="^.[rR][gG][bB](?: |$)(.*)")
-async def sticklet(event):
+async def rgb(event):
     R = random.randint(0,256)
     G = random.randint(0,256)
     B = random.randint(0,256)
