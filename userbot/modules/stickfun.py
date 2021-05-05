@@ -150,7 +150,7 @@ async def amogus(event):
 
     arr = random.randint(1, 12)
     fontsize = 110
-    FONT_FILE = await get_font_file(event.client, "@DogeFonts")
+    FONT_FILE = await get_font_file(event.client, "@DogeFont")
     url = 'https://raw.githubusercontent.com/MUTLCC/Doge/doge/Resources/StickFun/AmongUs/'
     font = ImageFont.truetype(FONT_FILE, size=fontsize)
 
@@ -193,7 +193,7 @@ async def doge(event):
 
     arr = random.randint(1, 15)
     fontsize = 110
-    FONT_FILE = await get_font_file(event.client, "@DogeFonts")
+    FONT_FILE = await get_font_file(event.client, "@DogeFont")
     url = 'https://raw.githubusercontent.com/MUTLCC/Doge/doge/Resources/StickFun/Doge/'
     font = ImageFont.truetype(FONT_FILE, size=fontsize)
 
@@ -249,7 +249,7 @@ async def rgb(event):
     draw = ImageDraw.Draw(image)
     fontsize = 230
 
-    FONT_FILE = await get_font_file(event.client, "@DogeFonts")
+    FONT_FILE = await get_font_file(event.client, "@DogeFont")
 
     font = ImageFont.truetype(FONT_FILE, size=fontsize)
 
